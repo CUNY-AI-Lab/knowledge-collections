@@ -5,8 +5,30 @@
   var total = slides.length;
   var current = 0;
   var overviewMode = false;
+  var announceEl = document.getElementById('slide-announce');
 
   document.getElementById('nav-total').textContent = total;
+
+  // --- Accessibility: extract slide title from aria-label ---
+  function slideTitle(index) {
+    var label = slides[index].getAttribute('aria-label');
+    return label || ('Slide ' + (index + 1));
+  }
+
+  // --- Accessibility: announce slide change to screen readers ---
+  function announceSlide(index) {
+    if (!announceEl) return;
+    announceEl.textContent = slideTitle(index) + ' of ' + total;
+  }
+
+  // --- Accessibility: update scrubber ARIA attributes ---
+  function updateScrubberAria(index) {
+    var scrubber = document.getElementById('scrubber-container');
+    if (!scrubber) return;
+    scrubber.setAttribute('aria-valuenow', index + 1);
+    scrubber.setAttribute('aria-valuemax', total);
+    scrubber.setAttribute('aria-valuetext', 'Slide ' + (index + 1) + ' of ' + total);
+  }
 
   // --- Navigation ---
   function goTo(index, instant) {
@@ -16,9 +38,11 @@
     slides.forEach(function(s, i) {
       if (i === current) {
         s.classList.add('active');
+        s.removeAttribute('aria-hidden');
         if (instant) { s.style.transition = 'none'; requestAnimationFrame(function() { s.style.transition = ''; }); }
       } else {
         s.classList.remove('active');
+        s.setAttribute('aria-hidden', 'true');
         resetSteps(s);
         resetStream(s);
       }
@@ -47,6 +71,13 @@
 
     // Update scrubber
     if (window.updateScrubber) window.updateScrubber(current, total);
+
+    // Accessibility: announce slide and move focus
+    announceSlide(current);
+    updateScrubberAria(current);
+    if (!instant) {
+      slides[current].focus({ preventScroll: true });
+    }
 
     // Show nav briefly
     var nav = document.getElementById('nav-bar');
@@ -96,9 +127,12 @@
     document.body.classList.toggle('overview-mode', overviewMode);
 
     if (overviewMode) {
+      if (announceEl) announceEl.textContent = 'Slide overview: ' + total + ' slides. Click a slide to jump to it, or press Escape to close.';
       requestAnimationFrame(function() {
         slides[current].scrollIntoView({ block: 'center', behavior: 'instant' });
       });
+    } else {
+      if (announceEl) announceEl.textContent = slideTitle(current) + ' of ' + total;
     }
   }
 

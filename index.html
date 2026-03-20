@@ -16,12 +16,15 @@
 <!-- Logo Watermark -->
 <img src="images/logo-horizontal.png" alt="CUNY AI Lab" class="logo-watermark" id="logoWatermark">
 
-<div id="deck">
+<!-- Accessible live region for slide announcements -->
+<div id="slide-announce" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+<div id="deck" role="region" aria-roledescription="slide deck" aria-label="Curating Knowledge Collections presentation">
 
 <!-- ==========================================
      SLIDE 1 — TITLE
      ========================================== -->
-<div class="slide title-slide">
+<div class="slide title-slide" role="group" aria-roledescription="slide" aria-label="Slide 1: Curating Knowledge Collections" tabindex="-1">
   <div class="title-slide-content">
     <img src="images/logo-horizontal.png" alt="CUNY AI Lab" class="title-logo">
     <h1>Curating Knowledge Collections</h1>
@@ -33,11 +36,11 @@
 <!-- ==========================================
      SLIDE 2 — WORKSHOP ROADMAP
      ========================================== -->
-<div class="slide layout-full-dark">
+<div class="slide layout-full-dark" role="group" aria-roledescription="slide" aria-label="Slide 2: Three Weeks, Three Skills" tabindex="-1">
   <span class="label label-cyan">Workshop Series</span>
   <h2>Three Weeks, Three Skills</h2>
   <div class="roadmap">
-    <div class="roadmap-item" style="opacity: 0.5;">
+    <div class="roadmap-item" style="opacity: 0.7;">
       <div class="week-label">March 16 &mdash; Last Week</div>
       <h4>Composing System Prompts &#10003;</h4>
       <p>Defined how the AI thinks, responds, and engages with your students</p>
@@ -58,7 +61,7 @@
 <!-- ==========================================
      SLIDE 3 — WHAT IS A KNOWLEDGE COLLECTION?
      ========================================== -->
-<div class="slide layout-split">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 3: What Is a Knowledge Collection?" tabindex="-1">
   <div class="content">
     <span class="label label-cyan">The Basics</span>
     <h2>What Is a Knowledge Collection?</h2>
@@ -97,19 +100,19 @@
       <div class="theater-frontstage">
         <div class="theater-conversation">
           <div class="theater-msg theater-msg-user">
-            <span class="theater-msg-who">&#128100; Student</span>
+            <span class="theater-msg-who"><span aria-hidden="true">&#128100;</span> Student</span>
             <span class="theater-msg-text">&ldquo;What does the rubric say about evidence?&rdquo;</span>
           </div>
         </div>
         <!-- AI Model sits between user prompt and response -->
         <div class="flow-node flow-model" style="width: 100%; margin: clamp(6px, 1vh, 10px) 0;">
-          <div class="flow-node-icon" style="font-size: 1.3rem;">&#129302;</div>
+          <div class="flow-node-icon" style="font-size: 1.3rem;" aria-hidden="true">&#129302;</div>
           <div class="flow-node-label" style="font-size: 0.82rem;">AI Model</div>
           <div class="flow-node-desc" style="font-size: 0.68rem;">Draws on uploaded course materials</div>
         </div>
         <div class="theater-conversation">
           <div class="theater-msg theater-msg-ai">
-            <span class="theater-msg-who">&#129302; Response</span>
+            <span class="theater-msg-who"><span aria-hidden="true">&#129302;</span> Response</span>
             <span class="theater-msg-text">&ldquo;The rubric asks for at least three sources cited with specific page numbers. Let&rsquo;s look at what you have so far.&rdquo;</span>
           </div>
         </div>
@@ -122,7 +125,7 @@
 <!-- ==========================================
      SLIDE 4 — WHERE IT LIVES IN OPEN WEBUI
      ========================================== -->
-<div class="slide layout-split">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 4: Where It Lives" tabindex="-1">
   <div class="content">
     <span class="label label-cyan">Open WebUI</span>
     <h2>Where It Lives</h2>
@@ -141,7 +144,7 @@
   </div>
   <div class="stage">
     <div class="screenshot-placeholder">
-      <div class="placeholder-icon">&#128218;</div>
+      <div class="placeholder-icon" aria-hidden="true">&#128218;</div>
       <div class="placeholder-text">Screenshots of the Workspace &rarr; Knowledge page and Model &rarr; Knowledge attachment will be added here</div>
     </div>
   </div>
@@ -150,7 +153,7 @@
 <!-- ==========================================
      SLIDE 5 — WHY IT MATTERS
      ========================================== -->
-<div class="slide layout-content">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 5: Why Knowledge Collections Matter" tabindex="-1">
   <span class="label label-cyan">Why Bother?</span>
   <h2>Why Knowledge Collections Matter</h2>
   <p style="margin-bottom: 0.6em;">A student asks: <strong>&ldquo;What should I focus on for the midterm essay?&rdquo;</strong></p>
@@ -171,7 +174,7 @@
 <!-- ==========================================
      SLIDE 6 — WHAT CAN YOU UPLOAD?
      ========================================== -->
-<div class="slide layout-full-dark">
+<div class="slide layout-full-dark" role="group" aria-roledescription="slide" aria-label="Slide 6: What Can You Upload?" tabindex="-1">
   <span class="label label-cyan">Building Materials</span>
   <h2>What Can You Upload?</h2>
   <p style="color: var(--light-text-50); max-width: 700px; margin-bottom: 1.2em;">Any document that helps the AI understand your course context. The model retrieves relevant passages when students ask questions.</p>
@@ -210,7 +213,7 @@
 <!-- ==========================================
      SLIDE 7 — SECTION DIVIDER: HOW RETRIEVAL WORKS
      ========================================== -->
-<div class="slide layout-divider">
+<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 7: How Retrieval Works" tabindex="-1">
   <span class="section-label">Under the Hood</span>
   <h2>How Retrieval Works</h2>
   <div class="divider-line"></div>
@@ -219,7 +222,7 @@
 <!-- ==========================================
      SLIDE 8 — RETRIEVAL EXPLANATION
      ========================================== -->
-<div class="slide layout-split">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 8: How the Model Uses Your Documents" tabindex="-1">
   <div class="content">
     <span class="label label-cyan">Retrieval-Augmented Generation</span>
     <h2>How the Model Uses Your Documents</h2>
@@ -238,37 +241,37 @@
     <div style="display: flex; flex-direction: column; gap: clamp(8px, 1.2vh, 14px); width: 100%; max-width: 320px; margin: 0 auto;">
       <!-- Step 1: Student question -->
       <div class="flow-node flow-student" style="width: 100%;">
-        <div class="flow-node-icon" style="font-size: 1.2rem;">&#128100;</div>
+        <div class="flow-node-icon" style="font-size: 1.2rem;" aria-hidden="true">&#128100;</div>
         <div class="flow-node-label" style="font-size: 0.78rem;">Student Question</div>
         <div class="flow-node-desc" style="font-size: 0.65rem;">&ldquo;What does the rubric say about citations?&rdquo;</div>
       </div>
       <!-- Arrow down -->
-      <div style="text-align: center;">
-        <svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-cyan)" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+      <div style="text-align: center;" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 20 20" focusable="false"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-cyan)" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
       </div>
       <!-- Step 2: Search -->
       <div class="flow-node" style="width: 100%; background: rgba(78, 205, 196, 0.08); border: 2px solid rgba(78, 205, 196, 0.3); border-radius: 12px;">
-        <div class="flow-node-icon" style="font-size: 1.2rem;">&#128269;</div>
+        <div class="flow-node-icon" style="font-size: 1.2rem;" aria-hidden="true">&#128269;</div>
         <div class="flow-node-label" style="font-size: 0.78rem;">Search Collection</div>
         <div class="flow-node-desc" style="font-size: 0.65rem;">Finds relevant passages from your documents</div>
       </div>
       <!-- Arrow down -->
-      <div style="text-align: center;">
-        <svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-blue)" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+      <div style="text-align: center;" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 20 20" focusable="false"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-blue)" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
       </div>
       <!-- Step 3: Model + context -->
       <div class="flow-node flow-model" style="width: 100%;">
-        <div class="flow-node-icon" style="font-size: 1.2rem;">&#129302;</div>
+        <div class="flow-node-icon" style="font-size: 1.2rem;" aria-hidden="true">&#129302;</div>
         <div class="flow-node-label" style="font-size: 0.78rem;">AI Model + Retrieved Context</div>
         <div class="flow-node-desc" style="font-size: 0.65rem;">System prompt + relevant passages + student message</div>
       </div>
       <!-- Arrow down -->
-      <div style="text-align: center;">
-        <svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-green)" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+      <div style="text-align: center;" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 20 20" focusable="false"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-green)" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
       </div>
       <!-- Step 4: Grounded response -->
       <div class="flow-node" style="width: 100%; background: white; border: 2px solid var(--accent-green); border-radius: 12px; box-shadow: 0 4px 20px rgba(91, 138, 111, 0.1);">
-        <div class="flow-node-icon" style="font-size: 1.2rem;">&#9989;</div>
+        <div class="flow-node-icon" style="font-size: 1.2rem;" aria-hidden="true">&#9989;</div>
         <div class="flow-node-label" style="font-size: 0.78rem;">Grounded Response</div>
         <div class="flow-node-desc" style="font-size: 0.65rem;">Answer references your actual course materials</div>
       </div>
@@ -279,7 +282,7 @@
 <!-- ==========================================
      SLIDE 9 — SECTION DIVIDER: EXAMPLES
      ========================================== -->
-<div class="slide layout-divider">
+<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 9: What Makes a Good Knowledge Collection?" tabindex="-1">
   <span class="section-label">Part I</span>
   <h2>What Makes a Good Knowledge Collection?</h2>
   <div class="divider-line"></div>
@@ -288,7 +291,7 @@
 <!-- ==========================================
      SLIDE 10 — SECTION DIVIDER: COMPOSITION
      ========================================== -->
-<div class="slide layout-divider">
+<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 10: Composition and Writing" tabindex="-1">
   <span class="section-label">Example 1</span>
   <h2>Composition &amp; Writing</h2>
   <div class="divider-line"></div>
@@ -297,10 +300,10 @@
 <!-- ==========================================
      SLIDE 11 — COMPOSITION: BAD COLLECTION
      ========================================== -->
-<div class="slide layout-content">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 11: Composition - The Bare Minimum" tabindex="-1">
   <div class="progression-header">
     <span class="label label-blue" style="margin-bottom: 0;">Composition &amp; Writing</span>
-    <div class="progression-dots">
+    <div class="progression-dots" aria-hidden="true">
       <div class="progression-dot dot-bad dot-active"></div>
       <div class="progression-dot"></div>
       <div class="progression-dot"></div>
@@ -322,10 +325,10 @@
 <!-- ==========================================
      SLIDE 12 — COMPOSITION: MEDIOCRE COLLECTION
      ========================================== -->
-<div class="slide layout-content">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 12: Composition - Getting Warmer" tabindex="-1">
   <div class="progression-header">
     <span class="label label-blue" style="margin-bottom: 0;">Composition &amp; Writing</span>
-    <div class="progression-dots">
+    <div class="progression-dots" aria-hidden="true">
       <div class="progression-dot dot-bad"></div>
       <div class="progression-dot dot-mid dot-active"></div>
       <div class="progression-dot"></div>
@@ -358,10 +361,10 @@
 <!-- ==========================================
      SLIDE 13 — COMPOSITION: GREAT COLLECTION
      ========================================== -->
-<div class="slide layout-content">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 13: A Collection That Grounds Revision" tabindex="-1">
   <div class="progression-header">
     <span class="label label-blue" style="margin-bottom: 0;">Composition &amp; Writing</span>
-    <div class="progression-dots">
+    <div class="progression-dots" aria-hidden="true">
       <div class="progression-dot dot-bad"></div>
       <div class="progression-dot dot-mid"></div>
       <div class="progression-dot dot-good dot-active"></div>
@@ -388,7 +391,7 @@
 <!-- ==========================================
      SLIDE 14 — SECTION DIVIDER: HISTORY
      ========================================== -->
-<div class="slide layout-divider">
+<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 14: Primary Source Analysis" tabindex="-1">
   <span class="section-label">Example 2</span>
   <h2>Primary Source Analysis</h2>
   <div class="divider-line"></div>
@@ -397,10 +400,10 @@
 <!-- ==========================================
      SLIDE 15 — HISTORY: BAD COLLECTION
      ========================================== -->
-<div class="slide layout-content">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 15: History - The Bare Minimum" tabindex="-1">
   <div class="progression-header">
     <span class="label label-blue" style="margin-bottom: 0;">History</span>
-    <div class="progression-dots">
+    <div class="progression-dots" aria-hidden="true">
       <div class="progression-dot dot-bad dot-active"></div>
       <div class="progression-dot"></div>
       <div class="progression-dot"></div>
@@ -422,10 +425,10 @@
 <!-- ==========================================
      SLIDE 16 — HISTORY: MEDIOCRE COLLECTION
      ========================================== -->
-<div class="slide layout-content">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 16: History - Getting Warmer" tabindex="-1">
   <div class="progression-header">
     <span class="label label-blue" style="margin-bottom: 0;">History</span>
-    <div class="progression-dots">
+    <div class="progression-dots" aria-hidden="true">
       <div class="progression-dot dot-bad"></div>
       <div class="progression-dot dot-mid dot-active"></div>
       <div class="progression-dot"></div>
@@ -458,10 +461,10 @@
 <!-- ==========================================
      SLIDE 17 — HISTORY: GREAT COLLECTION
      ========================================== -->
-<div class="slide layout-content">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 17: A Collection That Fosters Historical Thinking" tabindex="-1">
   <div class="progression-header">
     <span class="label label-blue" style="margin-bottom: 0;">History</span>
-    <div class="progression-dots">
+    <div class="progression-dots" aria-hidden="true">
       <div class="progression-dot dot-bad"></div>
       <div class="progression-dot dot-mid"></div>
       <div class="progression-dot dot-good dot-active"></div>
@@ -489,7 +492,7 @@
 <!-- ==========================================
      SLIDE 18 — SECTION DIVIDER: LITERATURE
      ========================================== -->
-<div class="slide layout-divider">
+<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 18: Close Reading and Literary Analysis" tabindex="-1">
   <span class="section-label">Example 3</span>
   <h2>Close Reading &amp; Literary Analysis</h2>
   <div class="divider-line"></div>
@@ -498,10 +501,10 @@
 <!-- ==========================================
      SLIDE 19 — LITERATURE: BAD COLLECTION
      ========================================== -->
-<div class="slide layout-content">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 19: Literature - The Bare Minimum" tabindex="-1">
   <div class="progression-header">
     <span class="label label-blue" style="margin-bottom: 0;">Literature &amp; Cultural Studies</span>
-    <div class="progression-dots">
+    <div class="progression-dots" aria-hidden="true">
       <div class="progression-dot dot-bad dot-active"></div>
       <div class="progression-dot"></div>
       <div class="progression-dot"></div>
@@ -523,10 +526,10 @@
 <!-- ==========================================
      SLIDE 20 — LITERATURE: MEDIOCRE COLLECTION
      ========================================== -->
-<div class="slide layout-content">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 20: Literature - Getting Warmer" tabindex="-1">
   <div class="progression-header">
     <span class="label label-blue" style="margin-bottom: 0;">Literature &amp; Cultural Studies</span>
-    <div class="progression-dots">
+    <div class="progression-dots" aria-hidden="true">
       <div class="progression-dot dot-bad"></div>
       <div class="progression-dot dot-mid dot-active"></div>
       <div class="progression-dot"></div>
@@ -559,10 +562,10 @@
 <!-- ==========================================
      SLIDE 21 — LITERATURE: GREAT COLLECTION
      ========================================== -->
-<div class="slide layout-content">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 21: A Collection That Fosters Close Reading" tabindex="-1">
   <div class="progression-header">
     <span class="label label-blue" style="margin-bottom: 0;">Literature &amp; Cultural Studies</span>
-    <div class="progression-dots">
+    <div class="progression-dots" aria-hidden="true">
       <div class="progression-dot dot-bad"></div>
       <div class="progression-dot dot-mid"></div>
       <div class="progression-dot dot-good dot-active"></div>
@@ -589,7 +592,7 @@
 <!-- ==========================================
      SLIDE 22 — SECTION DIVIDER: BUILDING BLOCKS
      ========================================== -->
-<div class="slide layout-divider">
+<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 22: Building Your Collection" tabindex="-1">
   <span class="section-label">Part II</span>
   <h2>Building Your Collection</h2>
   <div class="divider-line"></div>
@@ -598,7 +601,7 @@
 <!-- ==========================================
      SLIDE 23 — THE FIVE COMPONENTS
      ========================================== -->
-<div class="slide layout-content" style="justify-content: center; align-items: center; text-align: center;">
+<div class="slide layout-content" style="justify-content: center; align-items: center; text-align: center;" role="group" aria-roledescription="slide" aria-label="Slide 23: Anatomy of a Knowledge Collection" tabindex="-1">
   <span class="label label-cyan">Structure</span>
   <h2>Anatomy of a Knowledge Collection</h2>
   <p style="margin-bottom: 1.4em; max-width: 600px; margin-left: auto; margin-right: auto;">Every effective collection has three layers. We&rsquo;ll build yours one layer at a time.</p>
@@ -612,7 +615,7 @@
 <!-- ==========================================
      SLIDE 24 — LAYER 1: COURSE FRAMEWORK
      ========================================== -->
-<div class="slide layout-split">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 24: Course Framework" tabindex="-1">
   <div class="content">
     <span class="label label-cyan">Layer 1</span>
     <h2>Course Framework</h2>
@@ -646,7 +649,7 @@
 <!-- ==========================================
      SLIDE 25 — LAYER 2: ASSIGNMENT MATERIALS
      ========================================== -->
-<div class="slide layout-split">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 25: Assignment Materials" tabindex="-1">
   <div class="content">
     <span class="label label-cyan">Layer 2</span>
     <h2>Assignment Materials</h2>
@@ -684,7 +687,7 @@
 <!-- ==========================================
      SLIDE 26 — LAYER 3: SOURCE MATERIALS
      ========================================== -->
-<div class="slide layout-split">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 26: Source Materials" tabindex="-1">
   <div class="content">
     <span class="label label-cyan">Layer 3</span>
     <h2>Source Materials</h2>
@@ -721,7 +724,7 @@
 <!-- ==========================================
      SLIDE 27 — SECTION DIVIDER: BEST PRACTICES
      ========================================== -->
-<div class="slide layout-divider">
+<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 27: Best Practices and Pitfalls" tabindex="-1">
   <span class="section-label">Part III</span>
   <h2>Best Practices &amp; Pitfalls</h2>
   <div class="divider-line"></div>
@@ -730,7 +733,7 @@
 <!-- ==========================================
      SLIDE 28 — BEST PRACTICES
      ========================================== -->
-<div class="slide layout-grid">
+<div class="slide layout-grid" role="group" aria-roledescription="slide" aria-label="Slide 28: Curation Best Practices" tabindex="-1">
   <h2>Curation Best Practices</h2>
   <div class="grid-2">
     <div class="card card-cyan">
@@ -755,7 +758,7 @@
 <!-- ==========================================
      SLIDE 29 — COMMON PITFALLS
      ========================================== -->
-<div class="slide layout-content">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 29: Common Pitfalls" tabindex="-1">
   <span class="label label-cyan">Watch Out</span>
   <h2>Common Pitfalls</h2>
   <div class="grid-2" style="margin-top: 1em;">
@@ -781,7 +784,7 @@
 <!-- ==========================================
      SLIDE 30 — CONNECTING PROMPT + COLLECTION
      ========================================== -->
-<div class="slide layout-split">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 30: Prompt plus Collection" tabindex="-1">
   <div class="content">
     <span class="label label-cyan">Putting It Together</span>
     <h2>Prompt + Collection</h2>
@@ -821,16 +824,16 @@
 <!-- ==========================================
      SLIDE 31 — ROAD AHEAD
      ========================================== -->
-<div class="slide layout-full-dark">
+<div class="slide layout-full-dark" role="group" aria-roledescription="slide" aria-label="Slide 31: The Road Ahead" tabindex="-1">
   <span class="label label-cyan">Coming Up</span>
   <h2>The Road Ahead</h2>
   <div class="roadmap">
-    <div class="roadmap-item" style="opacity: 0.5;">
+    <div class="roadmap-item" style="opacity: 0.7;">
       <div class="week-label">March 16</div>
       <h4>System Prompts &#10003;</h4>
       <p>Defining how the AI thinks and teaches</p>
     </div>
-    <div class="roadmap-item" style="opacity: 0.5;">
+    <div class="roadmap-item" style="opacity: 0.7;">
       <div class="week-label">March 23 &mdash; Today</div>
       <h4>Knowledge Collections &#10003;</h4>
       <p>Grounding the AI in your course materials</p>
@@ -847,7 +850,7 @@
 <!-- ==========================================
      SLIDE 32 — CLOSING
      ========================================== -->
-<div class="slide title-slide closing-slide">
+<div class="slide title-slide closing-slide" role="group" aria-roledescription="slide" aria-label="Slide 32: Let's Build One Together" tabindex="-1">
   <div class="title-slide-content">
     <img src="images/logo-horizontal.png" alt="CUNY AI Lab" class="title-logo">
     <h1>Let&rsquo;s Build One Together</h1>
@@ -867,10 +870,10 @@
 </div><!-- /deck -->
 
 <!-- Navigation Bar -->
-<div id="nav-bar">
+<nav id="nav-bar" aria-label="Slide navigation">
   <button id="arrow-prev" class="arrow-btn" aria-label="Previous slide" title="Previous slide (&larr;)">&#8592;</button>
   <span class="nav-info"><strong id="nav-current">1</strong> / <span id="nav-total"></span></span>
-  <div id="scrubber-container" class="scrubber-container">
+  <div id="scrubber-container" class="scrubber-container" role="slider" aria-label="Slide progress" aria-valuemin="1" aria-valuemax="32" aria-valuenow="1" aria-valuetext="Slide 1 of 32" tabindex="0">
     <div class="scrubber-track">
       <div id="scrubber-progress" class="scrubber-progress"></div>
       <div class="scrubber-thumb">
@@ -879,8 +882,8 @@
     </div>
   </div>
   <button id="arrow-next" class="arrow-btn" aria-label="Next slide" title="Next slide (&rarr;)">&#8594;</button>
-  <span class="nav-keys"><kbd>Esc</kbd> overview</span>
-</div>
+  <span class="nav-keys" aria-hidden="true"><kbd>Esc</kbd> overview</span>
+</nav>
 
 
 <script>

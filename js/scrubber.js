@@ -26,6 +26,26 @@
     document.addEventListener('touchmove', onDrag, { passive: false });
     document.addEventListener('mouseup', stopDrag);
     document.addEventListener('touchend', stopDrag);
+
+    // Keyboard support for the ARIA slider
+    scrubberContainer.addEventListener('keydown', function(e) {
+      if (!window.deckEngine) return;
+      var cur = window.deckEngine.currentSlide();
+      var tot = window.deckEngine.totalSlides();
+      if (e.key === 'ArrowRight' || e.key === 'ArrowUp') {
+        e.preventDefault(); e.stopPropagation();
+        if (cur < tot - 1) window.goTo(cur + 1);
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') {
+        e.preventDefault(); e.stopPropagation();
+        if (cur > 0) window.goTo(cur - 1);
+      } else if (e.key === 'Home') {
+        e.preventDefault(); e.stopPropagation();
+        window.goTo(0);
+      } else if (e.key === 'End') {
+        e.preventDefault(); e.stopPropagation();
+        window.goTo(tot - 1);
+      }
+    });
   }
 
   function startDrag(e) { isDragging = true; e.stopPropagation(); }
