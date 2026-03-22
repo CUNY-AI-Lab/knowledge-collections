@@ -193,7 +193,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.3em;
   color: var(--accent-cyan);
-  margin-bottom: 1.5em;
+  margin-bottom: 1.2em;
   position: relative;
 }
 
@@ -208,11 +208,19 @@ body {
   letter-spacing: -0.02em;
 }
 
+.layout-divider .divider-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+  color: var(--light-text-50);
+  margin-top: 1em;
+  max-width: 600px;
+}
+
 .layout-divider .divider-line {
   width: 60px;
   height: 3px;
   background: var(--accent-cyan);
-  margin-top: 2em;
+  margin-top: 1.5em;
   position: relative;
 }
 
