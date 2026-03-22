@@ -60,35 +60,46 @@
 </div>
 
 <!-- ==========================================
-     SLIDE — MODEL SETUP (new, Iteration 3)
+     SLIDE — MODEL SETUP (Iteration 5 — full pre-flight)
      ========================================== -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide: Before We Start: Configure Your Model" data-slide="model-setup" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide: Before We Start: Set Up Your Model Card" data-slide="model-setup" tabindex="-1">
   <div class="content">
     <span class="label label-cyan">Before We Start</span>
-    <h2>Open Your Model in the Workspace</h2>
-    <p style="margin-bottom: 0.8em;">Everything you build today attaches to the model you created last week. Before we cover knowledge collections, make sure that model is ready.</p>
-    <div class="card card-cyan" style="margin-bottom: 0.6em;">
+    <h2>Set Up Your Model Card</h2>
+    <p style="margin-bottom: 0.8em;">Knowledge collections attach to a model card in <strong>Workspace &rarr; Models</strong>. Complete these steps before we go further &mdash; the model card is the foundation everything else builds on today.</p>
+    <div class="card card-cyan" style="margin-bottom: 0.5em;">
       <h4>1. Go to Workspace &rarr; Models</h4>
-      <p>Find the model you built last week. Click to open it.</p>
+      <p>Click <strong>+ New Model</strong> to create one, or open the model card you built last week.</p>
     </div>
-    <div class="card" style="margin-bottom: 0.6em;">
-      <h4>2. Check your system prompt</h4>
-      <p>Scroll to <strong>System Prompt</strong> under Model Params. Confirm it&rsquo;s there. Make any adjustments now. This is the last chance before we layer knowledge on top.</p>
+    <div class="card" style="margin-bottom: 0.5em;">
+      <h4>2. Name the model card</h4>
+      <p>Give it a descriptive name tied to your course &mdash; for example, <em>ENGL 101 Writing Scaffold</em> or <em>History 202 Source Analysis Tool</em>.</p>
     </div>
-    <div class="card card-navy">
-      <h4>3. Keep this tab open</h4>
-      <p>You&rsquo;ll return here at the end of today&rsquo;s exercise to attach your knowledge collection directly to this model.</p>
+    <div class="card" style="margin-bottom: 0.5em;">
+      <h4>3. Select a base model</h4>
+      <p>Choose a model from the Sandbox (DeepSeek, Qwen3, Llama, etc.). This is the underlying model your custom card will run on.</p>
+    </div>
+    <div class="card" style="margin-bottom: 0.5em;">
+      <h4>4. Add your system prompt</h4>
+      <p>Scroll to <strong>System Prompt</strong> under Model Params. Paste the prompt you wrote last week. This defines how the model behaves with students.</p>
+    </div>
+    <div class="card card-navy" style="margin-bottom: 0.5em;">
+      <h4>5. Save, then test in chat</h4>
+      <p>Save the model card. Open a <strong>new chat</strong>, click the model selector at the top, and choose your custom model. Send one message to confirm it responds as expected.</p>
+    </div>
+    <div class="tip-box" style="margin-top: 0.6em;">
+      <p><strong>Keep this tab open.</strong> You will return to this model card at the end of today&rsquo;s exercise to attach the knowledge collection you build.</p>
     </div>
   </div>
   <div class="stage">
     <div class="carousel" data-interval="7000">
       <div class="carousel-item active">
         <img src="images/slide4-c.png" alt="Open WebUI Models page listing all custom models available in the Sandbox">
-        <div class="carousel-caption"><strong>Workspace &rarr; Models</strong><br>Find the model you configured last week and click to open it.</div>
+        <div class="carousel-caption"><strong>Workspace &rarr; Models</strong><br>Click <strong>+ New Model</strong> or open your existing model card. Name it, select a base model, and add your system prompt.</div>
       </div>
       <div class="carousel-item">
-        <img src="images/slide4-d.png" alt="Model editor with the System Prompt field visible under Model Params">
-        <div class="carousel-caption"><strong>System Prompt field</strong><br>Scroll to Model Params and verify your prompt is in place. You&rsquo;ll return here to attach today&rsquo;s collection.</div>
+        <img src="images/slide4-d.png" alt="Model editor showing the System Prompt field under Model Params and the Knowledge section below">
+        <div class="carousel-caption"><strong>Model card editor</strong><br>System Prompt lives under Model Params. The <strong>Knowledge</strong> section below it is where today&rsquo;s collection will attach.</div>
       </div>
       <div class="carousel-dots"></div>
     </div>
