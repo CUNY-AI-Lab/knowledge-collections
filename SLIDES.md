@@ -37,14 +37,13 @@ A **knowledge collection** is a set of documents you upload to ground an AI mode
 
 ---
 
-## Slide 4 - Where It Lives (Open WebUI)
+## Slide 4 - Where It Lives (Workspace)
 
-In the CUNY AI Lab Sandbox, knowledge collections live in two places:
+Knowledge collections are managed from the Workspace menu. When you attach a collection to a model card, the model can draw on those documents to answer questions. Your system prompt tells the model when and how to use them.
 
-1. **Knowledge Base** - Go to Workspace → Knowledge to create a new collection. Upload PDFs, text files, and documents. Give it a name and description.
-2. **Model Configuration** - Go to Workspace → Models, open your custom model, and attach your knowledge collection under Knowledge.
-
-**Workflow:** Create the collection first, then attach it to your model. The system prompt you wrote last week tells the model *how* to use these materials.
+- **Workspace → Knowledge** is where you build and manage collections.
+- **Workspace → Models** is where you attach a collection to a model card.
+- In chat, you can also pull in a collection on the fly by typing `#` followed by its name.
 
 ---
 
@@ -240,13 +239,13 @@ Literary Texts: sonny-blues-baldwin.pdf, passage-selections.txt
 
 ---
 
-## Slide 23 - Anatomy of a Knowledge Collection
+## Slide 23 - Components of a Knowledge Collection
 
 Every effective collection has three layers:
 
-1. **Course Framework** — Syllabus, learning objectives, and the analytical framework students use
-2. **Assignment Materials** — Prompts, rubrics, examples, and common feedback patterns
-3. **Source Materials** — Readings, primary sources, and reference documents for the current unit
+1. **Course Context** — Syllabus, calendar, and related course documents
+2. **Assignment Materials** — Instructions, lesson plans scaffolding the assignment, examples of preferred feedback patterns
+3. **Source Materials** — Readings, primary sources, and reference documents for the current mini-unit, module, or class session
 
 ---
 
