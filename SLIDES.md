@@ -344,9 +344,9 @@ Pick one assignment from your course. You will build a knowledge collection for 
 
 **Step 0: Your model is already open.** You configured it at the start of the workshop. Keep it in a second tab. You'll attach your collection to it at the end of this exercise.
 
-1. **Course Framework:** Syllabus, learning objectives, and the analytical framework students use
-2. **Assignment Materials:** Prompts, rubrics, examples, and common feedback patterns
-3. **Source Materials:** Readings, primary sources, and reference documents for the current unit
+1. **Course Context:** Syllabus, calendar
+2. **Assignment Materials:** Instructions, feedback examples
+3. **Source Materials:** Assigned readings, primary sources
 
 ---
 
