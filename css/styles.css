@@ -16,6 +16,29 @@
   border: 0;
 }
 
+/* Skip link — hidden off-screen, slides into view on focus */
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: 16px;
+  z-index: 9999;
+  background: var(--accent-cyan);
+  color: var(--dark-bg);
+  padding: 8px 16px;
+  border-radius: 0 0 6px 6px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+}
+
 html { font-size: 100%; }
 html, body { height: 100%; overflow: hidden; }
 body {

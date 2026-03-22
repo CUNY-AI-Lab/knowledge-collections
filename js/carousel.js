@@ -22,7 +22,8 @@
         dotsContainer.appendChild(dot);
       });
 
-      carousels.set(slideIndex, { items: items, dots: Array.from(dotsContainer.children), current: 0, interval: interval, timer: null });
+      var syncSteps = carousel.hasAttribute('data-sync-steps');
+      carousels.set(slideIndex, { items: items, dots: Array.from(dotsContainer.children), current: 0, interval: interval, timer: null, syncSteps: syncSteps });
 
       var prevBtn = document.createElement('button');
       prevBtn.className = 'carousel-arrow carousel-arrow-prev';
@@ -88,6 +89,8 @@
   function startCarousel(slideIndex) {
     var c = carousels.get(slideIndex);
     if (!c || c.items.length <= 1) return;
+    // Don't auto-advance synced carousels — they advance with step reveals
+    if (c.syncSteps) return;
     clearInterval(c.timer);
     c.timer = setInterval(function() { setCarouselIndex(slideIndex, (c.current + 1) % c.items.length); }, c.interval);
   }
@@ -99,10 +102,19 @@
     c.timer = null;
   }
 
+  // Called by deck-engine on step reveals for synced carousels
+  function updateCarousels(slideIndex, stepNumber) {
+    var c = carousels.get(slideIndex);
+    if (!c || !c.syncSteps) return;
+    var imgIndex = Math.min(stepNumber - 1, c.items.length - 1);
+    if (imgIndex >= 0) setCarouselIndex(slideIndex, imgIndex);
+  }
+
   window.initCarousels = initCarousels;
   window.setCarouselIndex = setCarouselIndex;
   window.startCarousel = startCarousel;
   window.pauseCarousel = pauseCarousel;
+  window.updateCarousels = updateCarousels;
 
   document.addEventListener('DOMContentLoaded', initCarousels);
 })();

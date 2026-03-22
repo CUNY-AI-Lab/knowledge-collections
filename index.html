@@ -85,7 +85,7 @@
     </div>
   </div>
   <div class="stage">
-    <div class="carousel" data-interval="8000">
+    <div class="carousel" data-interval="8000" data-sync-steps>
       <div class="carousel-item active">
         <img src="images/slide3-workspace-create.png" alt="Open WebUI sidebar showing Workspace menu item">
         <div class="carousel-caption"><strong>Workspace &rarr; Models</strong><br>Navigate to Workspace in the sidebar, then open the Models tab.</div>
@@ -324,7 +324,7 @@
 <div class="slide layout-full-dark" role="group" aria-roledescription="slide" aria-label="Slide 9: What Can You Upload?" data-slide="upload-types" tabindex="-1">
   <span class="label label-cyan">Building Materials</span>
   <h2>What Can You Upload?</h2>
-  <p style="color: var(--light-text-50); max-width: 700px; margin-bottom: 1.2em;">Relevant documents ground AI models in context and help shape their responses. Files you upload are stored on CUNY&rsquo;s self-hosted servers and are made private by default.</p>
+  <p style="color: var(--light-text-50); max-width: 700px; margin-bottom: 1.2em;">Uploaded files ground AI models in context and help shape their responses. These documents are stored on CUNY&rsquo;s self-hosted servers and made private by default.</p>
   <div class="model-grid">
     <div class="model-card">
       <h4>Syllabi</h4>
@@ -389,8 +389,8 @@
     <ul style="margin-top: 0.8em; line-height: 1.9;">
       <li><strong>Chunking:</strong> Your files are split into smaller passages when uploaded</li>
       <li><strong>Matching:</strong> Questions are matched against those chunks</li>
-      <li><strong>Retrieval:</strong> Closest matches are included in the model&rsquo;s context window</li>
-      <li><strong>Response:</strong> Model generates output grounded in the retrieved passages</li>
+      <li><strong>Injection:</strong> Closest matches appended to model&rsquo;s context window</li>
+      <li><strong>Response:</strong> Model generates output grounded in retrieved passages</li>
     </ul>
     <div class="tip-box" style="margin-top: 0.8em;">
       <p><strong>Implication:</strong> Short, focused documents with clear headings retrieve better than long, unstructured files. In other words, the way you organize your materials matters.</p>
