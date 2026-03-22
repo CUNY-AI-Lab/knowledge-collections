@@ -19,7 +19,7 @@ March 23, 2026
 
 | Date | Session | Description |
 |------|---------|-------------|
-| March 16 - Last Week | Composing System Prompts ✓ | Designed, constrained, and instructed AI models to serve your course objectives |
+| March 16 - Last Week | Composing System Prompts ✓ | Learned how system prompts can help orchestrate and constrain AI models to address specific course goals |
 | March 23 - This Week | Curating Knowledge Collections | Upload syllabi, readings, and relevant sources to ground AI models in course materials |
 | March 30 | Customizing Skills & Tools | Build specialized skills, tools, and workflows tailored to your courses |
 
