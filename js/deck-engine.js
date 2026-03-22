@@ -4,6 +4,7 @@
   var slides = Array.from(document.querySelectorAll('.slide'));
   var total = slides.length;
   var current = 0;
+  var currentStep = 0; // Track which step is currently visible (0 = none, 1+ = step number)
   var overviewMode = false;
   var announceEl = document.getElementById('slide-announce');
 
@@ -40,6 +41,11 @@
         s.classList.add('active');
         s.removeAttribute('aria-hidden');
         if (instant) { s.style.transition = 'none'; requestAnimationFrame(function() { s.style.transition = ''; }); }
+        // Initialize first step as visible when entering slide
+        currentStep = 0;
+        if (window.updateCarousels) {
+          window.updateCarousels(current, 1); // Show initial carousel state (step 1)
+        }
       } else {
         s.classList.remove('active');
         s.setAttribute('aria-hidden', 'true');
@@ -92,6 +98,11 @@
     var hidden = slide.querySelector('.step-hidden:not(.step-visible)');
     if (hidden) {
       hidden.classList.add('step-visible');
+      // Track step number and update carousels
+      currentStep++;
+      if (window.updateCarousels) {
+        window.updateCarousels(current, currentStep);
+      }
       return true; // consumed the advance
     }
     return false;
@@ -100,6 +111,10 @@
   function resetSteps(slideEl) {
     var steps = slideEl.querySelectorAll('[data-step]');
     steps.forEach(function(el) { el.classList.remove('step-visible'); });
+    // Reset step counter when navigating away
+    if (slideEl === slides[current]) {
+      currentStep = 0;
+    }
   }
 
   // --- Stream-in for bullet lists ---

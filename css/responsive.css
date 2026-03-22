@@ -5,6 +5,10 @@
   h3 { font-size: clamp(1rem, 2.2vw, 1.5rem); }
   .layout-split > .content { padding: clamp(16px, 2.5vh, 32px) clamp(20px, 2vw, 40px); }
   .layout-split > .stage { padding: clamp(16px, 2vh, 24px); }
+  .carousel-item img {
+    max-width: 96%;
+    max-height: 60vh;
+  }
 }
 
 @media (max-width: 768px) {
@@ -45,10 +49,19 @@
 
   .tip-box { padding: clamp(12px, 2vw, 16px); }
 
+  .carousel-item img {
+    max-width: 98%;
+    max-height: 55vh;
+  }
+
   body.overview-mode .slide { width: calc(50% - 8px); }
 }
 
 @media (max-width: 480px) {
+  .carousel-item img {
+    max-width: 100%;
+    max-height: 50vh;
+  }
   html { font-size: 75%; }
   body { font-size: 0.95rem; }
 

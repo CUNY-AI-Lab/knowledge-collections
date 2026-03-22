@@ -13,8 +13,10 @@
 </head>
 <body>
 
+<a href="#deck" class="skip-link">Skip to slides</a>
+
 <!-- Logo Watermark -->
-<img src="images/logo-horizontal.png" alt="CUNY AI Lab" class="logo-watermark" id="logoWatermark">
+<img src="images/logo-horizontal.png" alt="" aria-hidden="true" class="logo-watermark" id="logoWatermark">
 
 <!-- Accessible live region for slide announcements -->
 <div id="slide-announce" class="sr-only" aria-live="polite" aria-atomic="true"></div>
@@ -42,12 +44,12 @@
   <h2>Three Weeks, Three Skills</h2>
   <div class="roadmap">
     <div class="roadmap-item" style="opacity: 0.7;">
-      <div class="week-label">March 16 &mdash; Last Week</div>
-      <h4>Composing System Prompts &#10003;</h4>
+      <div class="week-label">March 16 (Last Week)</div>
+      <h4><a href="https://cuny-ai-lab.github.io/system-prompting" style="color: var(--accent-cyan); text-decoration: underline; text-underline-offset: 3px;">Composing System Prompts &#10003;</a></h4>
       <p>Learned how system prompts can help orchestrate and constrain AI models to address specific course goals</p>
     </div>
     <div class="roadmap-item active">
-      <div class="week-label">March 23 &mdash; This Week</div>
+      <div class="week-label">March 23 (This Week)</div>
       <h4>Curating Knowledge Collections</h4>
       <p>Upload syllabi, readings, and relevant sources to ground AI models in course materials</p>
     </div>
@@ -60,46 +62,37 @@
 </div>
 
 <!-- ==========================================
-     SLIDE — MODEL SETUP (Iteration 5 — full pre-flight)
+     SLIDE 3 — SIGN IN
      ========================================== -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide: Before We Start: Set Up Your Model Card" data-slide="model-setup" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 3: Sign In and Navigate to Workspace" data-slide="sign-in" tabindex="-1">
   <div class="content">
-    <span class="label label-cyan">Before We Start</span>
-    <h2>Set Up Your Model Card</h2>
-    <p style="margin-bottom: 0.8em;">Knowledge collections attach to a model card in <strong>Workspace &rarr; Models</strong>. Complete these steps before we go further &mdash; the model card is the foundation everything else builds on today.</p>
-    <div class="card card-cyan" style="margin-bottom: 0.5em;">
-      <h4>1. Go to Workspace &rarr; Models</h4>
-      <p>Click <strong>+ New Model</strong> to create one, or open the model card you built last week.</p>
+    <span class="label label-cyan">Getting Started</span>
+    <h2>Sign In and Navigate to Workspace</h2>
+    <p style="margin-bottom: 0.8em;">Before we begin, make sure you can access the CUNY AI Lab Sandbox.</p>
+
+    <div class="card card-cyan step-hidden" data-step="1" style="margin-bottom: 0.5em;">
+      <h4>1. Go to chat.ailab.gc.cuny.edu</h4>
+      <p>Sign in with your CUNY account. If you don&rsquo;t have access yet, let us know and we&rsquo;ll get you set up.</p>
     </div>
-    <div class="card" style="margin-bottom: 0.5em;">
-      <h4>2. Name the model card</h4>
-      <p>Give it a descriptive name tied to your course &mdash; for example, <em>ENGL 101 Writing Scaffold</em> or <em>History 202 Source Analysis Tool</em>.</p>
+
+    <div class="card card-navy step-hidden" data-step="2" style="margin-bottom: 0.5em;">
+      <h4>2. Open Workspace</h4>
+      <p>Look for <strong>Workspace</strong> in the top left, three rows below <strong>New Chat</strong>. Click it. This is where you&rsquo;ll build your model card and knowledge collection.</p>
     </div>
-    <div class="card" style="margin-bottom: 0.5em;">
-      <h4>3. Select a base model</h4>
-      <p>Choose a model from the Sandbox (DeepSeek, Qwen3, Llama, etc.). This is the underlying model your custom card will run on.</p>
-    </div>
-    <div class="card" style="margin-bottom: 0.5em;">
-      <h4>4. Add your system prompt</h4>
-      <p>Scroll to <strong>System Prompt</strong> under Model Params. Paste the prompt you wrote last week. This defines how the model behaves with students.</p>
-    </div>
-    <div class="card card-navy" style="margin-bottom: 0.5em;">
-      <h4>5. Save, then test in chat</h4>
-      <p>Save the model card. Open a <strong>new chat</strong>, click the model selector at the top, and choose your custom model. Send one message to confirm it responds as expected.</p>
-    </div>
-    <div class="tip-box" style="margin-top: 0.6em;">
-      <p><strong>Keep this tab open.</strong> You will return to this model card at the end of today&rsquo;s exercise to attach the knowledge collection you build.</p>
+
+    <div class="tip-box step-hidden" data-step="3" style="margin-top: 1em;">
+      <p><strong>Next:</strong> Once you&rsquo;re signed in and can see the Workspace menu, you&rsquo;re ready to set up your model card on the next slide.</p>
     </div>
   </div>
   <div class="stage">
-    <div class="carousel" data-interval="7000">
+    <div class="carousel" data-interval="8000">
       <div class="carousel-item active">
-        <img src="images/slide4-c.png" alt="Open WebUI Models page listing all custom models available in the Sandbox">
-        <div class="carousel-caption"><strong>Workspace &rarr; Models</strong><br>Click <strong>+ New Model</strong> or open your existing model card. Name it, select a base model, and add your system prompt.</div>
+        <img src="images/slide3-workspace-create.png" alt="Open WebUI sidebar showing Workspace menu item">
+        <div class="carousel-caption"><strong>Workspace &rarr; Models</strong><br>Navigate to Workspace in the sidebar, then open the Models tab.</div>
       </div>
       <div class="carousel-item">
-        <img src="images/slide4-d.png" alt="Model editor showing the System Prompt field under Model Params and the Knowledge section below">
-        <div class="carousel-caption"><strong>Model card editor</strong><br>System Prompt lives under Model Params. The <strong>Knowledge</strong> section below it is where today&rsquo;s collection will attach.</div>
+        <img src="images/slide3-model-basics.png" alt="Workspace Models page listing custom models in the Sandbox">
+        <div class="carousel-caption"><strong>Models List</strong><br>Click <strong>+ New Model</strong> to create one, or open an existing model card.</div>
       </div>
       <div class="carousel-dots"></div>
     </div>
@@ -107,20 +100,110 @@
 </div>
 
 <!-- ==========================================
-     SLIDE 3 — WHAT IS A KNOWLEDGE COLLECTION?
+     SLIDE 4 — SET UP YOUR MODEL CARD
      ========================================== -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 3: What Is a Knowledge Collection?" data-slide="what-is" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 4: Set Up Your Model Card" data-slide="model-setup" tabindex="-1">
   <div class="content">
+    <span class="label label-cyan">Before We Start</span>
+    <h2>Set Up Your Model Card</h2>
+    <p style="margin-bottom: 0.8em;">Knowledge collections attach to a model card in <strong>Workspace &rarr; Models</strong>. Complete these steps before we go further. The model card is the foundation everything else builds on today.</p>
+    <div class="card card-cyan step-hidden" data-step="1" style="margin-bottom: 0.5em;">
+      <h4>1. Name the model card</h4>
+      <p>Give it a descriptive name tied to your course, for example <em>ENGL 101 Writing Scaffold</em> or <em>History 202 Source Analysis Tool</em>.</p>
+    </div>
+    <div class="card step-hidden" data-step="2" style="margin-bottom: 0.5em;">
+      <h4>2. Select a base model</h4>
+      <p>Choose a base model from the Sandbox (e.g., GLM-5, GPT-OSS-120b, or Kimi-k2.5). This is the underlying model your custom configuration will run on.</p>
+    </div>
+    <div class="card step-hidden" data-step="3" style="margin-bottom: 0.5em;">
+      <h4>3. Add your system prompt</h4>
+      <p>Find the <strong>System Prompt</strong> field under Model Params and paste the prompt you wrote last week.</p>
+    </div>
+    <div class="card card-navy step-hidden" data-step="4" style="margin-bottom: 0.5em;">
+      <h4>4. Save your work</h4>
+      <p>Click the <strong>Save</strong> button. Your model card is now ready for a knowledge collection.</p>
+    </div>
+    <div class="tip-box step-hidden" data-step="5" style="margin-top: 0.6em;">
+      <p><strong>Keep this tab open.</strong> You will return to this model card at the end of today&rsquo;s exercise to attach the knowledge collection you build.</p>
+    </div>
+  </div>
+  <div class="stage">
+    <div class="carousel" data-interval="8000">
+      <div class="carousel-item active">
+        <img src="images/slide3-system-prompt.png" alt="Model card editor showing fields for name, base model, system prompt, and knowledge collection">
+        <div class="carousel-caption"><strong>Inside the Model Card</strong><br>Name your model, select a base model, paste your system prompt, and save. The <strong>Knowledge</strong> section below is where today&rsquo;s collection will attach.</div>
+      </div>
+      <div class="carousel-dots"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================
+     SLIDE 5 — TEST YOUR MODEL IN CHAT
+     ========================================== -->
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 5: Test Your Model in Chat" data-slide="test-model" tabindex="-1">
+  <div class="content">
+    <span class="label label-cyan">Dry Run</span>
+    <h2>Test Your Model in Chat</h2>
+    <p style="margin-bottom: 0.8em;">Your model is saved. Now test it to make sure it responds as expected before attaching a knowledge collection.</p>
+
+    <div class="card card-cyan" style="margin-bottom: 0.5em;">
+      <h4>1. Click New Chat</h4>
+      <p>Go back to the chat interface. Click <strong>New Chat</strong> in the top left to start a fresh conversation.</p>
+    </div>
+
+    <div class="card" style="margin-bottom: 0.5em;">
+      <h4>2. Toggle the model selector</h4>
+      <p>At the top of the chat window, you&rsquo;ll see the model name. Click the dropdown arrow next to it.</p>
+    </div>
+
+    <div class="card" style="margin-bottom: 0.5em;">
+      <h4>3. Select your model</h4>
+      <p>Find your newly created model (e.g., <strong>ENGL 101 Writing Scaffold</strong>) in the dropdown list and select it.</p>
+    </div>
+
+    <div class="card card-navy" style="margin-bottom: 0.5em;">
+      <h4>4. Send a test message</h4>
+      <p>Type a simple message related to your course. Send it and observe the response.</p>
+    </div>
+
+    <div class="tip-box" style="margin-top: 0.6em;">
+      <p><strong>Look for:</strong> Does the model respond in the voice you configured? Does your system prompt shape the tone and approach of the answer?</p>
+    </div>
+  </div>
+  <div class="stage" style="flex-direction: column; justify-content: center; align-items: center; padding: clamp(16px, 2.5vw, 40px);">
+    <!-- TODO: Add screenshot of test chat with custom model selected -->
+    <div style="width: 100%; aspect-ratio: 4/3; border-radius: 8px; border: 2px dashed rgba(78, 205, 196, 0.3); display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.85rem; text-align: center; padding: 1em;">
+      Screenshot placeholder:<br>Testing a custom model in chat
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================
+     SECTION DIVIDER — KNOWLEDGE COLLECTIONS
+     ========================================== -->
+<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 6: Knowledge Collections" data-slide="kc-intro" tabindex="-1">
+  <span class="section-label">Part I</span>
+  <h2>Knowledge Collections</h2>
+  <p class="divider-sub" style="margin-top: 0.5em; opacity: 0.7; font-size: 0.95rem;">What they are, where they live, and how they work</p>
+  <div class="divider-line"></div>
+</div>
+
+<!-- ==========================================
+     SLIDE — WHAT IS A KNOWLEDGE COLLECTION?
+     ========================================== -->
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 7: What Is a Knowledge Collection?" data-slide="what-is" tabindex="-1">
+  <div class="content" style="flex: 0 0 42%;">
     <span class="label label-cyan">The Basics</span>
     <h2>What Is a Knowledge Collection?</h2>
-    <p style="margin-bottom: 0.8em;">A <strong>knowledge collection</strong> is a set of documents you upload to ground an AI model in specific course materials. The model retrieves relevant passages from these documents when responding to students.</p>
-    <blockquote>Think of it as the <strong>reading list</strong> for your AI tool: the sources it can reference, the assignments it knows about, and the disciplinary context it works within.</blockquote>
+    <p style="margin-bottom: 0.8em;">A <strong>knowledge collection</strong> is a set of documents you upload to ground an AI model in specific course materials. Relevant passages are retrieved from these documents when responding to students.</p>
+    <blockquote>Think of it as the <strong>reading list</strong> for your AI tool: the sources it draws on, the assignments it's grounded in, and the disciplinary context that shapes its responses.</blockquote>
     <div class="tip-box" style="margin-top: 1em;">
-      <p><strong>Key distinction:</strong> The <em>system prompt</em> tells the model how to behave. The <em>knowledge collection</em> tells it what to draw on. Together, they create a tool grounded in your teaching context.</p>
+      <p><strong>Key distinction:</strong> The <em>system prompt</em> tells the model how to behave. The <em>knowledge collection</em> provides the source material. Together, they create a tool grounded in your teaching context.</p>
       <p style="margin-top: 0.6em; font-size: 0.9em; opacity: 0.85;"><strong>Your model is ready. Now give it something to draw on.</strong> By the end of today, your knowledge collection will be attached directly to the model you just opened.</p>
     </div>
   </div>
-  <div class="stage" style="background: var(--bg-light); flex-direction: column; padding: clamp(12px, 2vh, 28px) clamp(10px, 1.2vw, 20px); justify-content: center;">
+  <div class="stage" style="background: var(--bg-light); flex-direction: column; padding: clamp(16px, 2.5vh, 32px) clamp(14px, 1.8vw, 24px); justify-content: center;">
     <div class="theater-diagram">
       <!-- Behind the curtain: instructor builds both -->
       <div class="theater-backstage">
@@ -128,14 +211,14 @@
         <div class="theater-backstage-row">
           <div class="flow-node flow-prompt" style="width: auto; flex: 1;">
             <span class="flow-hidden-badge">Hidden</span>
-            <div class="flow-node-code" style="font-size: 0.75rem;">System Prompt</div>
-            <div class="flow-node-desc" style="font-family: 'JetBrains Mono', monospace; color: var(--accent-cyan); margin-top: 2px; font-size: 0.65rem;">&ldquo;You are a writing scaffold&hellip;&rdquo;</div>
+            <div class="flow-node-code" style="font-size: 0.85rem;">System Prompt</div>
+            <div class="flow-node-desc" style="font-family: 'JetBrains Mono', monospace; color: var(--accent-cyan); margin-top: 3px; font-size: 0.72rem;">&ldquo;You are a writing scaffold&hellip;&rdquo;</div>
           </div>
-          <div style="display: flex; align-items: center; padding: 0 4px; font-size: 0.8rem; color: var(--accent-cyan); font-weight: 700;">+</div>
+          <div style="display: flex; align-items: center; padding: 0 6px; font-size: 0.9rem; color: var(--accent-cyan); font-weight: 700;">+</div>
           <div class="flow-node flow-prompt" style="width: auto; flex: 1; border-color: rgba(59, 111, 181, 0.4);">
             <span class="flow-hidden-badge" style="background: var(--accent-blue);">New</span>
-            <div class="flow-node-code" style="font-size: 0.75rem;">Knowledge Collection</div>
-            <div class="flow-node-desc" style="font-family: 'JetBrains Mono', monospace; color: var(--accent-light-blue); margin-top: 2px; font-size: 0.65rem;">syllabus.pdf, rubric.pdf&hellip;</div>
+            <div class="flow-node-code" style="font-size: 0.85rem;">Knowledge Collection</div>
+            <div class="flow-node-desc" style="font-family: 'JetBrains Mono', monospace; color: var(--accent-light-blue); margin-top: 3px; font-size: 0.72rem;">syllabus.pdf, rubric.pdf&hellip;</div>
           </div>
         </div>
       </div>
@@ -155,9 +238,9 @@
         </div>
         <!-- AI Model sits between user prompt and response -->
         <div class="flow-node flow-model" style="width: 100%; margin: clamp(6px, 1vh, 10px) 0;">
-          <div class="flow-node-icon" style="font-size: 1.3rem;" aria-hidden="true">&#129302;</div>
-          <div class="flow-node-label" style="font-size: 0.82rem;">AI Model</div>
-          <div class="flow-node-desc" style="font-size: 0.68rem;">Retrieves passages from uploaded course materials</div>
+          <div class="flow-node-icon" style="font-size: 1.5rem;" aria-hidden="true">&#129302;</div>
+          <div class="flow-node-label" style="font-size: 0.92rem;">AI Model</div>
+          <div class="flow-node-desc" style="font-size: 0.76rem;">Retrieves passages from uploaded course materials</div>
         </div>
         <div class="theater-conversation">
           <div class="theater-msg theater-msg-ai">
@@ -174,40 +257,40 @@
 <!-- ==========================================
      SLIDE 4 — WHERE IT LIVES IN OPEN WEBUI
      ========================================== -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 4: Where It Lives" data-slide="where-it-lives" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 7: Where It Lives" data-slide="where-it-lives" tabindex="-1">
   <div class="content">
-    <span class="label label-cyan">Open WebUI</span>
+    <span class="label label-cyan">Workspace</span>
     <h2>Where It Lives</h2>
-    <p style="margin-bottom: 0.6em;">Your model is open. Now you need two things to attach to it:</p>
+    <p style="margin-bottom: 0.8em;">Knowledge collections and model cards both live in the <strong>Workspace</strong> menu. Here&rsquo;s how they connect:</p>
     <div class="card card-cyan" style="margin-bottom: 0.6em;">
-      <h4>Step 1 &mdash; Already done</h4>
-      <p>Your <strong>Model File</strong> is open in <strong>Workspace &rarr; Models</strong>. System prompt is set. This is where the collection will attach.</p>
+      <h4>Workspace &rarr; Knowledge</h4>
+      <p>Create a collection, give it a name, and upload your course documents.</p>
     </div>
     <div class="card" style="margin-bottom: 0.6em;">
-      <h4>Step 2 &mdash; Today</h4>
-      <p>Go to <strong>Workspace &rarr; Knowledge</strong> to create your collection. Upload PDFs and documents, then return to your model to attach it under <strong>Knowledge</strong>.</p>
+      <h4>Workspace &rarr; Models</h4>
+      <p>Open your model card and attach the collection under the <strong>Knowledge</strong> field. This is how the model gains access to your materials.</p>
     </div>
     <div class="tip-box">
-      <p><strong>Order matters:</strong> Model first, collection second. The system prompt defines behavior; the knowledge collection defines the source documents the model queries. Both live in the same model file.</p>
+      <p>Your system prompt tells the model how to behave. The knowledge collection gives it something to draw on. Both are configured in the same model card.</p>
     </div>
   </div>
   <div class="stage">
     <div class="carousel" data-interval="8000">
       <div class="carousel-item active">
-        <img src="images/slide4-c.png" alt="Open WebUI Models page listing all custom models available in the Sandbox">
-        <div class="carousel-caption"><strong>Your Model &mdash; Already Open</strong><br>You&rsquo;re in <strong>Workspace &rarr; Models</strong>. This is where today&rsquo;s collection will attach. Keep it open.</div>
+        <img src="images/slide4-a.png" alt="Workspace Knowledge tab showing existing collections and the New Knowledge button">
+        <div class="carousel-caption"><strong>Workspace &rarr; Knowledge</strong><br>Click <strong>+ New Knowledge</strong> to create a collection.</div>
       </div>
       <div class="carousel-item">
-        <img src="images/slide4-d.png" alt="Model editor with the Knowledge section highlighted showing Select Knowledge and Upload Files buttons">
-        <div class="carousel-caption"><strong>Where the Collection Attaches</strong><br>Scroll to the <strong>Knowledge</strong> section. After you create your collection, you&rsquo;ll click <strong>Select Knowledge</strong> here.</div>
+        <img src="images/slide4-b.png" alt="Create a knowledge base form with name, description, and privacy settings">
+        <div class="carousel-caption"><strong>Name and Describe</strong><br>Give your collection a name, describe its contents, and set access. Click <strong>Create Knowledge</strong> when ready.</div>
       </div>
       <div class="carousel-item">
-        <img src="images/slide4-a.png" alt="Open WebUI Workspace with Knowledge tab selected showing existing collections and the New Knowledge button">
-        <div class="carousel-caption"><strong>Create Your Collection &mdash; Step 1</strong><br>Go to <strong>Workspace &rarr; Knowledge</strong> and click <strong>+ New Knowledge</strong> to start building your collection.</div>
+        <img src="images/slide4-c.png" alt="Workspace Models page listing custom models">
+        <div class="carousel-caption"><strong>Workspace &rarr; Models</strong><br>Open your model card to attach the collection.</div>
       </div>
       <div class="carousel-item">
-        <img src="images/slide4-b.png" alt="Create a knowledge base form with name, description, privacy, and access settings">
-        <div class="carousel-caption"><strong>Create Your Collection &mdash; Step 2</strong><br>Name your collection, describe what it contains, and set access permissions. Click <strong>Create Knowledge</strong> when ready.</div>
+        <img src="images/slide4-d.png" alt="Model card editor with Knowledge section highlighted showing Select Knowledge and Upload Files">
+        <div class="carousel-caption"><strong>Knowledge Field</strong><br>Click <strong>Select Knowledge</strong> to attach your collection to the model card.</div>
       </div>
       <div class="carousel-dots"></div>
     </div>
@@ -217,7 +300,7 @@
 <!-- ==========================================
      SLIDE 5 — WHY IT MATTERS
      ========================================== -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 5: Why Knowledge Collections Matter" data-slide="why-it-matters" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 8: Why Knowledge Collections Matter" data-slide="why-it-matters" tabindex="-1">
   <span class="label label-cyan">Why Bother?</span>
   <h2>Why Knowledge Collections Matter</h2>
   <p style="margin-bottom: 0.6em;">If you create a custom model that acts as a course assistant, a student might ask: <strong>&ldquo;What should I focus on for the midterm essay?&rdquo;</strong></p>
@@ -225,7 +308,7 @@
     <div class="comparison-panel panel-muted step-visible">
       <h4 style="color: var(--accent-red);">Without Knowledge Collection</h4>
       <p>&ldquo;For a midterm essay, you should generally focus on your thesis statement, use evidence from your readings, and structure your argument clearly. Make sure to address counterarguments.&rdquo;</p>
-      <p style="margin-top: 0.6em; font-style: italic; font-size: 0.85em; opacity: 0.7;">Generic advice. No awareness of the assignment, the rubric, or the course readings.</p>
+      <p style="margin-top: 0.6em; font-style: italic; font-size: 0.85em; opacity: 0.7;">Generic advice. No connection to the assignment, the rubric, or the course readings.</p>
     </div>
     <div class="comparison-panel step-hidden" data-step="2">
       <h4 style="color: var(--accent-green);">With Knowledge Collection</h4>
@@ -238,10 +321,10 @@
 <!-- ==========================================
      SLIDE 6 — WHAT CAN YOU UPLOAD?
      ========================================== -->
-<div class="slide layout-full-dark" role="group" aria-roledescription="slide" aria-label="Slide 6: What Can You Upload?" data-slide="upload-types" tabindex="-1">
+<div class="slide layout-full-dark" role="group" aria-roledescription="slide" aria-label="Slide 9: What Can You Upload?" data-slide="upload-types" tabindex="-1">
   <span class="label label-cyan">Building Materials</span>
   <h2>What Can You Upload?</h2>
-  <p style="color: var(--light-text-50); max-width: 700px; margin-bottom: 1.2em;">Any document that helps the AI understand your course context. The model retrieves relevant passages when students ask questions.</p>
+  <p style="color: var(--light-text-50); max-width: 700px; margin-bottom: 1.2em;">Relevant documents ground AI models in context and help shape their responses. Files you upload are stored on CUNY&rsquo;s self-hosted servers and are made private by default.</p>
   <div class="model-grid">
     <div class="model-card">
       <h4>Syllabi</h4>
@@ -253,7 +336,7 @@
     </div>
     <div class="model-card">
       <h4>Rubrics</h4>
-      <p>Grading criteria so the model can reference specific expectations</p>
+      <p>Evaluation criteria so the model can reference specific expectations</p>
     </div>
     <div class="model-card" style="border-left-color: var(--accent-cyan);">
       <h4>Course Readings</h4>
@@ -297,59 +380,59 @@
 <!-- ==========================================
      SLIDE 7 — RETRIEVAL (merged: was slides 7+8)
      ========================================== -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 7: How the Model Uses Your Documents" data-slide="retrieval" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 10: How the Model Uses Your Documents" data-slide="retrieval" tabindex="-1">
   <div class="content">
     <span class="section-label" style="font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-cyan); margin-bottom: 0.3em; display: block;">Under the Hood</span>
     <span class="label label-cyan">Retrieval-Augmented Generation</span>
-    <h2>How the Model Uses Your Documents</h2>
+    <h2>How Your Documents Reach the Model</h2>
     <p style="margin-bottom: 0.8em;">When a student asks a question, the system doesn&rsquo;t feed the <em>entire</em> collection to the model. It searches for the most relevant passages and uses them as the basis for its response.</p>
     <ul style="margin-top: 0.8em; line-height: 1.9;">
-      <li><strong>Chunking:</strong> Your documents are split into smaller passages when uploaded</li>
-      <li><strong>Search:</strong> The student&rsquo;s question is matched against those passages</li>
-      <li><strong>Injection:</strong> The top matches are included in the model&rsquo;s context window</li>
-      <li><strong>Response:</strong> The model generates an answer grounded in those passages</li>
+      <li><strong>Chunking:</strong> Your files are split into smaller passages when uploaded</li>
+      <li><strong>Matching:</strong> Questions are matched against those chunks</li>
+      <li><strong>Retrieval:</strong> Closest matches are included in the model&rsquo;s context window</li>
+      <li><strong>Response:</strong> Model generates output grounded in the retrieved passages</li>
     </ul>
     <div class="tip-box" style="margin-top: 0.8em;">
       <p><strong>Implication:</strong> Short, focused documents with clear headings retrieve better than long, unstructured files. In other words, the way you organize your materials matters.</p>
     </div>
   </div>
   <div class="stage" style="background: var(--bg-light); flex-direction: column; padding: clamp(16px, 2.5vw, 32px); justify-content: center;">
-    <div style="display: flex; flex-direction: column; gap: clamp(8px, 1.2vh, 14px); width: 100%; max-width: 320px; margin: 0 auto;">
+    <div style="display: flex; flex-direction: column; gap: clamp(10px, 1.5vh, 18px); width: 100%; max-width: 420px; margin: 0 auto;">
       <!-- Step 1: Student question -->
       <div class="flow-node flow-student" style="width: 100%;">
-        <div class="flow-node-icon" style="font-size: 1.2rem;" aria-hidden="true">&#128100;</div>
-        <div class="flow-node-label" style="font-size: 0.78rem;">Student Question</div>
-        <div class="flow-node-desc" style="font-size: 0.65rem;">&ldquo;What does the rubric say about citations?&rdquo;</div>
+        <div class="flow-node-icon" style="font-size: 1.5rem;" aria-hidden="true">&#128100;</div>
+        <div class="flow-node-label" style="font-size: 0.95rem;">Student Question</div>
+        <div class="flow-node-desc" style="font-size: 0.8rem;">&ldquo;What does the rubric say about citations?&rdquo;</div>
       </div>
       <!-- Arrow down -->
       <div style="text-align: center;" aria-hidden="true">
-        <svg width="20" height="20" viewBox="0 0 20 20" focusable="false"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-cyan)" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+        <svg width="24" height="24" viewBox="0 0 20 20" focusable="false"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-cyan)" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
       </div>
       <!-- Step 2: Search -->
       <div class="flow-node" style="width: 100%; background: rgba(78, 205, 196, 0.08); border: 2px solid rgba(78, 205, 196, 0.3); border-radius: 12px;">
-        <div class="flow-node-icon" style="font-size: 1.2rem;" aria-hidden="true">&#128269;</div>
-        <div class="flow-node-label" style="font-size: 0.78rem;">Search Collection</div>
-        <div class="flow-node-desc" style="font-size: 0.65rem;">Finds relevant passages from your documents</div>
+        <div class="flow-node-icon" style="font-size: 1.5rem;" aria-hidden="true">&#128269;</div>
+        <div class="flow-node-label" style="font-size: 0.95rem;">Search Collection</div>
+        <div class="flow-node-desc" style="font-size: 0.8rem;">Finds relevant passages from your files</div>
       </div>
       <!-- Arrow down -->
       <div style="text-align: center;" aria-hidden="true">
-        <svg width="20" height="20" viewBox="0 0 20 20" focusable="false"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-blue)" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+        <svg width="24" height="24" viewBox="0 0 20 20" focusable="false"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-blue)" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
       </div>
       <!-- Step 3: Model + context -->
       <div class="flow-node flow-model" style="width: 100%;">
-        <div class="flow-node-icon" style="font-size: 1.2rem;" aria-hidden="true">&#129302;</div>
-        <div class="flow-node-label" style="font-size: 0.78rem;">AI Model + Retrieved Context</div>
-        <div class="flow-node-desc" style="font-size: 0.65rem;">System prompt + relevant passages + student message</div>
+        <div class="flow-node-icon" style="font-size: 1.5rem;" aria-hidden="true">&#129302;</div>
+        <div class="flow-node-label" style="font-size: 0.95rem;">AI Model + Retrieved Context</div>
+        <div class="flow-node-desc" style="font-size: 0.8rem;">System prompt + relevant passages + student message</div>
       </div>
       <!-- Arrow down -->
       <div style="text-align: center;" aria-hidden="true">
-        <svg width="20" height="20" viewBox="0 0 20 20" focusable="false"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-green)" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+        <svg width="24" height="24" viewBox="0 0 20 20" focusable="false"><path d="M10 2 L10 14 M6 10 L10 16 L14 10" stroke="var(--accent-green)" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
       </div>
       <!-- Step 4: Grounded response -->
       <div class="flow-node" style="width: 100%; background: white; border: 2px solid var(--accent-green); border-radius: 12px; box-shadow: 0 4px 20px rgba(91, 138, 111, 0.1);">
-        <div class="flow-node-icon" style="font-size: 1.2rem;" aria-hidden="true">&#9989;</div>
-        <div class="flow-node-label" style="font-size: 0.78rem;">Grounded Response</div>
-        <div class="flow-node-desc" style="font-size: 0.65rem;">Answer references your actual course materials</div>
+        <div class="flow-node-icon" style="font-size: 1.5rem;" aria-hidden="true">&#9989;</div>
+        <div class="flow-node-label" style="font-size: 0.95rem;">Grounded Response</div>
+        <div class="flow-node-desc" style="font-size: 0.8rem;">Answer references your actual course materials</div>
       </div>
     </div>
   </div>
@@ -358,9 +441,9 @@
 <!-- ==========================================
      SLIDE 8 — SECTION DIVIDER: EXAMPLES (merged: was slides 9+10)
      ========================================== -->
-<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 8: What Makes a Good Knowledge Collection?" data-slide="part1" tabindex="-1">
-  <span class="section-label">Part I &mdash; Example 1</span>
-  <h2>What Makes a Good Knowledge Collection?</h2>
+<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 11: What Makes an Effective Knowledge Collection?" data-slide="part1" tabindex="-1">
+  <span class="section-label">Part II: Example 1</span>
+  <h2>What Makes an Effective Knowledge Collection?</h2>
   <p class="divider-sub" style="margin-top: 0.5em; opacity: 0.7; font-size: 0.95rem;">Starting with Composition &amp; Writing</p>
   <div class="divider-line"></div>
 </div>
@@ -368,7 +451,7 @@
 <!-- ==========================================
      SLIDE 11 — COMPOSITION: BAD COLLECTION
      ========================================== -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 11: Composition - The Bare Minimum" data-slide="composition-bad" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 12: Composition: The Bare Minimum" data-slide="composition-bad" tabindex="-1">
   <div class="progression-header">
     <span class="label label-blue" style="margin-bottom: 0;">Composition &amp; Writing</span>
     <div class="progression-dots" aria-hidden="true">
@@ -383,7 +466,7 @@
   <div style="margin-top: 1em;">
     <h4 style="color: var(--accent-red);">What goes wrong?</h4>
     <ul class="stream-list step-hidden" data-step>
-      <li>One large document retrieves poorly: the model pulls random passages instead of relevant ones</li>
+      <li>One large document retrieves poorly: retrieved passages are often irrelevant</li>
       <li>No assignment-specific materials for the model to reference</li>
       <li>No rubric, no readings, no examples of what good work looks like</li>
     </ul>
@@ -393,7 +476,7 @@
 <!-- ==========================================
      SLIDE 12 — COMPOSITION: MEDIOCRE COLLECTION
      ========================================== -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 12: Composition - Getting Warmer" data-slide="composition-mid" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 13: Composition: Getting Warmer" data-slide="composition-mid" tabindex="-1">
   <div class="progression-header">
     <span class="label label-blue" style="margin-bottom: 0;">Composition &amp; Writing</span>
     <div class="progression-dots" aria-hidden="true">
@@ -411,7 +494,7 @@
   <div class="why-better">
     <h4>What improved?</h4>
     <ul class="stream-list step-hidden" data-step>
-      <li>Separate documents for different purposes: the model can find the rubric when asked about grading</li>
+      <li>Separate documents for different purposes: the model can find the rubric when asked about expectations</li>
       <li>Assignment-specific prompt gives the model context for that unit</li>
       <li>Style guide helps with formatting questions</li>
     </ul>
@@ -429,7 +512,7 @@
 <!-- ==========================================
      SLIDE 13 — COMPOSITION: GREAT COLLECTION
      ========================================== -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 13: A Collection That Grounds Revision" data-slide="composition-good" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 14: A Collection That Grounds Revision" data-slide="composition-good" tabindex="-1">
   <div class="progression-header">
     <span class="label label-blue" style="margin-bottom: 0;">Composition &amp; Writing</span>
     <div class="progression-dots" aria-hidden="true">
@@ -439,15 +522,15 @@
     </div>
   </div>
   <h2>A Collection That Grounds Revision</h2>
-  <div class="prompt-block prompt-good" style="font-size: clamp(0.75rem, 1.05vw, 0.9rem);"><span class="prompt-label">Strong</span>Collection contents:
+  <div class="prompt-block prompt-good" style="font-size: clamp(0.85rem, 1.15vw, 1rem);"><span class="prompt-label">Strong</span>Collection contents:
 
-<strong style="color: var(--accent-cyan);">Course Framework</strong>
+<strong style="color: var(--accent-cyan);">Course Context</strong>
 &bull; syllabus.pdf: schedule, learning objectives, policies
 &bull; revision-philosophy.txt: instructor notes on what revision means in this course
 
 <strong style="color: var(--accent-cyan);">Assignment Materials (Essay 1: Rhetoric in Popular Media)</strong>
 &bull; essay-1-prompt.pdf: assignment instructions and requirements
-&bull; essay-1-rubric.pdf: grading criteria with descriptions of each level
+&bull; essay-1-rubric.pdf: evaluation criteria with descriptions of each level
 &bull; common-feedback.txt: patterns from past semesters (e.g., thesis too broad, evidence not analyzed)
 
 <strong style="color: var(--accent-cyan);">Reference Materials</strong>
@@ -459,7 +542,7 @@
 <!-- ==========================================
      SLIDE 14 — SECTION DIVIDER: HISTORY
      ========================================== -->
-<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 14: Primary Source Analysis" data-slide="history-intro" tabindex="-1">
+<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 15: Primary Source Analysis" data-slide="history-intro" tabindex="-1">
   <span class="section-label">Example 2</span>
   <h2>Primary Source Analysis</h2>
   <div class="divider-line"></div>
@@ -468,7 +551,7 @@
 <!-- ==========================================
      SLIDE 15 — HISTORY: BAD COLLECTION
      ========================================== -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 15: History - The Bare Minimum" data-slide="history-bad" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 16: History: The Bare Minimum" data-slide="history-bad" tabindex="-1">
   <div class="progression-header">
     <span class="label label-blue" style="margin-bottom: 0;">History</span>
     <div class="progression-dots" aria-hidden="true">
@@ -493,7 +576,7 @@
 <!-- ==========================================
      SLIDE 16 — HISTORY: MEDIOCRE COLLECTION
      ========================================== -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 16: History - Getting Warmer" data-slide="history-mid" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 17: History: Getting Warmer" data-slide="history-mid" tabindex="-1">
   <div class="progression-header">
     <span class="label label-blue" style="margin-bottom: 0;">History</span>
     <div class="progression-dots" aria-hidden="true">
@@ -529,7 +612,7 @@
 <!-- ==========================================
      SLIDE 17 — HISTORY: GREAT COLLECTION
      ========================================== -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 17: A Collection That Fosters Historical Thinking" data-slide="history-good" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 18: A Collection That Fosters Historical Thinking" data-slide="history-good" tabindex="-1">
   <div class="progression-header">
     <span class="label label-blue" style="margin-bottom: 0;">History</span>
     <div class="progression-dots" aria-hidden="true">
@@ -539,12 +622,12 @@
     </div>
   </div>
   <h2>A Collection That Fosters Historical Thinking</h2>
-  <div class="prompt-block prompt-good" style="font-size: clamp(0.75rem, 1.05vw, 0.9rem);"><span class="prompt-label">Strong</span>Collection contents:
+  <div class="prompt-block prompt-good" style="font-size: clamp(0.85rem, 1.15vw, 1rem);"><span class="prompt-label">Strong</span>Collection contents:
 
-<strong style="color: var(--accent-cyan);">Course Framework</strong>
+<strong style="color: var(--accent-cyan);">Course Context</strong>
 &bull; syllabus.pdf: schedule, themes, learning objectives
 &bull; soaps-framework.txt: the analytical framework students use, with definitions and examples
-&bull; source-analysis-rubric.pdf: grading criteria for the source analysis report
+&bull; source-analysis-rubric.pdf: evaluation criteria for the source analysis report
 
 <strong style="color: var(--accent-cyan);">Primary Sources (Reconstruction Unit)</strong>
 &bull; freedmens-bureau-report-1866.pdf: with metadata: author, date, document type, archive
@@ -560,7 +643,7 @@
 <!-- ==========================================
      SLIDE 18 — SECTION DIVIDER: LITERATURE
      ========================================== -->
-<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 18: Close Reading and Literary Analysis" data-slide="literature-intro" tabindex="-1">
+<div class="slide layout-divider" role="group" aria-roledescription="slide" aria-label="Slide 19: Close Reading and Literary Analysis" data-slide="literature-intro" tabindex="-1">
   <span class="section-label">Example 3</span>
   <h2>Close Reading &amp; Literary Analysis</h2>
   <div class="divider-line"></div>
@@ -569,7 +652,7 @@
 <!-- ==========================================
      SLIDE 19 — LITERATURE: BAD COLLECTION
      ========================================== -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 19: Literature - The Bare Minimum" data-slide="literature-bad" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 20: Literature: The Bare Minimum" data-slide="literature-bad" tabindex="-1">
   <div class="progression-header">
     <span class="label label-blue" style="margin-bottom: 0;">Literature &amp; Cultural Studies</span>
     <div class="progression-dots" aria-hidden="true">
@@ -594,7 +677,7 @@
 <!-- ==========================================
      SLIDE 20 — LITERATURE: MEDIOCRE COLLECTION
      ========================================== -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 20: Literature - Getting Warmer" data-slide="literature-mid" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 21: Literature: Getting Warmer" data-slide="literature-mid" tabindex="-1">
   <div class="progression-header">
     <span class="label label-blue" style="margin-bottom: 0;">Literature &amp; Cultural Studies</span>
     <div class="progression-dots" aria-hidden="true">
@@ -630,7 +713,7 @@
 <!-- ==========================================
      SLIDE 21 — LITERATURE: GREAT COLLECTION
      ========================================== -->
-<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 21: A Collection That Fosters Close Reading" data-slide="literature-good" tabindex="-1">
+<div class="slide layout-content" role="group" aria-roledescription="slide" aria-label="Slide 22: A Collection That Fosters Close Reading" data-slide="literature-good" tabindex="-1">
   <div class="progression-header">
     <span class="label label-blue" style="margin-bottom: 0;">Literature &amp; Cultural Studies</span>
     <div class="progression-dots" aria-hidden="true">
@@ -640,16 +723,16 @@
     </div>
   </div>
   <h2>A Collection That Fosters Close Reading</h2>
-  <div class="prompt-block prompt-good" style="font-size: clamp(0.75rem, 1.05vw, 0.9rem);"><span class="prompt-label">Strong</span>Collection contents:
+  <div class="prompt-block prompt-good" style="font-size: clamp(0.85rem, 1.15vw, 1rem);"><span class="prompt-label">Strong</span>Collection contents:
 
-<strong style="color: var(--accent-cyan);">Course Framework</strong>
+<strong style="color: var(--accent-cyan);">Course Context</strong>
 &bull; syllabus.pdf: schedule, texts, learning objectives
 &bull; new-criticism-framework.txt: key concepts: close reading, tension, irony, paradox, ambiguity
 &bull; literary-terms-glossary.txt: definitions of terms used in the course (diction, imagery, syntax, tone)
 
 <strong style="color: var(--accent-cyan);">Assignment Materials (Close Reading Essay)</strong>
 &bull; close-reading-assignment.pdf: instructions and requirements
-&bull; close-reading-rubric.pdf: grading criteria for textual analysis
+&bull; close-reading-rubric.pdf: evaluation criteria for textual analysis
 &bull; annotated-passage-example.txt: model annotation showing how to move from observation to interpretation
 
 <strong style="color: var(--accent-cyan);">Literary Texts (Current Unit)</strong>
@@ -660,8 +743,8 @@
 <!-- ==========================================
      SLIDE — BEST PRACTICES (Part II label folded in; was slides 22+23)
      ========================================== -->
-<div class="slide layout-grid" role="group" aria-roledescription="slide" aria-label="Slide: Curation Best Practices" data-slide="best-practices" tabindex="-1">
-  <span class="section-label" style="font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-cyan); margin-bottom: 0.5em; display: block;">Part II</span>
+<div class="slide layout-grid" role="group" aria-roledescription="slide" aria-label="Slide 23: Curation Best Practices" data-slide="best-practices" tabindex="-1">
+  <span class="section-label" style="font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-cyan); margin-bottom: 0.5em; display: block;">Part III</span>
   <h2>Curation Best Practices</h2>
   <div class="grid-2">
     <div class="card card-cyan">
@@ -673,8 +756,8 @@
       <p>Include titles, authors, dates, and clear section headings. These act as retrieval anchors that help the model find the right passage.</p>
     </div>
     <div class="card card-navy">
-      <h4>Write What the Model Can&rsquo;t Infer</h4>
-      <p>The model doesn&rsquo;t know your pedagogical intent. A short &ldquo;common-feedback.txt&rdquo; or &ldquo;context-notes.txt&rdquo; written in your own words is more valuable than another PDF.</p>
+      <h4>Supply What&rsquo;s Not in the Documents</h4>
+      <p>Your pedagogical intent isn&rsquo;t in the PDFs. A short &ldquo;common-feedback.txt&rdquo; or &ldquo;context-notes.txt&rdquo; written in your own words and priorities are more valuable than another PDF.</p>
     </div>
     <div class="card card-cyan">
       <h4>Update Per Unit</h4>
@@ -692,7 +775,7 @@
   <div class="grid-2" style="margin-top: 1em;">
     <div class="card" style="border-left-color: var(--accent-red);">
       <h4>Dumping Everything In</h4>
-      <p>Uploading every reading for the entire semester dilutes retrieval quality. The model retrieves passages from the whole collection. More documents means more noise.</p>
+      <p>Uploading every reading for the entire semester dilutes retrieval quality. The model retrieves passages from the whole collection. More documents means more noise. Start small and add materials as you test.</p>
     </div>
     <div class="card" style="border-left-color: var(--accent-red);">
       <h4>One Giant PDF</h4>
@@ -700,11 +783,11 @@
     </div>
     <div class="card" style="border-left-color: var(--accent-amber);">
       <h4>Forgetting the System Prompt</h4>
-      <p>A knowledge collection without a system prompt is a pile of documents with no instructions. The system prompt tells the model <em>how</em> to use the materials.</p>
+      <p>Your system prompt needs explicit instructions for when and how to draw on the knowledge collection attached to the model. Without that, the collection is just a pile of documents.</p>
     </div>
     <div class="card" style="border-left-color: var(--accent-amber);">
-      <h4>Assuming the Model Read Everything</h4>
-      <p>The model only sees retrieved passages, not the full document. If something is critical, make it easy to retrieve: put it in its own file with a clear heading.</p>
+      <h4>Assuming Full Coverage</h4>
+      <p>Only retrieved passages are included in each response, not the full document. If something is critical, make it easy to retrieve: put it in its own file with a clear heading.</p>
     </div>
   </div>
 </div>
@@ -712,28 +795,24 @@
 <!-- ==========================================
      SLIDE — THREE LAYERS EXERCISE (merged: was slides 25+26; Part III label folded in)
      ========================================== -->
-<div class="slide layout-content" style="justify-content: center; align-items: center; text-align: center;" role="group" aria-roledescription="slide" aria-label="Slide: Build Your Collection" data-slide="three-layers" tabindex="-1">
-  <span class="section-label" style="font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-cyan); margin-bottom: 0.3em; display: block;">Part III &mdash; Hands-On</span>
-  <span class="label label-cyan">Exercise</span>
-  <h2>Build a Collection in Three Layers</h2>
-  <p style="margin-bottom: 0.8em; max-width: 600px; margin-left: auto; margin-right: auto;">Pick one assignment from your course. You will build a knowledge collection for it, one layer at a time.</p>
-  <div class="tip-box" style="max-width: 580px; margin: 0 auto 1em; text-align: left;">
-    <p><strong>Step 0 &mdash; Your model is already open.</strong> You configured it at the start of the workshop. Keep it in a second tab. You&rsquo;ll attach your collection to it at the end of this exercise.</p>
-  </div>
+<div class="slide layout-content" style="justify-content: center; align-items: center; text-align: center;" role="group" aria-roledescription="slide" aria-label="Slide 25: Build Your Collection" data-slide="three-layers" tabindex="-1">
+  <span class="section-label" style="font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-cyan); margin-bottom: 0.3em; display: block;">Part IV</span>
+  <h2>Three Types of Reference Material</h2>
+  <p style="margin-bottom: 1em; max-width: 600px; margin-left: auto; margin-right: auto;">Approach knowledge collections in terms of three types of reference material. As we overview each one, think about which file from your course you would add first.</p>
   <ol class="stream-list" style="text-align: left; max-width: 580px; margin: 0 auto; line-height: 1.9; padding-left: 1.4em;">
-    <li><strong>Course Framework:</strong> Syllabus, learning objectives, and the analytical framework students use</li>
-    <li><strong>Assignment Materials:</strong> Prompts, rubrics, examples, and common feedback patterns</li>
-    <li><strong>Source Materials:</strong> Readings, primary sources, and reference documents for the current unit</li>
+    <li><strong>Course Context</strong> &mdash; Syllabus, calendar, and related course documents</li>
+    <li><strong>Assignment Materials</strong> &mdash; Instructions, lesson plans, examples of preferred feedback patterns</li>
+    <li><strong>Source Materials</strong> &mdash; Readings, primary sources, and reference documents for the current mini-unit, module, or class session</li>
   </ol>
 </div>
 
 <!-- ==========================================
      SLIDE 27 — LAYER 1: COURSE FRAMEWORK
      ========================================== -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 27: Course Framework" data-slide="layer-framework" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 26: Course Context" data-slide="layer-framework" tabindex="-1">
   <div class="content">
-    <span class="label label-cyan">Step 1</span>
-    <h2>Course Framework</h2>
+    <span class="label label-cyan">Type 1</span>
+    <h2>Course Context</h2>
     <p>Start with the documents that establish your course&rsquo;s identity: what students are learning, how they&rsquo;re assessed, and what methods they use.</p>
     <ul style="margin-top: 1em; line-height: 1.9;">
       <li>What are the course&rsquo;s learning objectives?</li>
@@ -756,7 +835,7 @@
    - Write it out in plain language with definitions</pre>
     </div>
     <div class="tip-box" style="margin-top: 1.2em;">
-      <p><strong>Your turn:</strong> What framework or methodology is central to your course? Write a short document (1-2 pages) explaining it in the terms you use with students.</p>
+      <p><strong>Consider:</strong> Is there a framework or methodology central to your course? If so, a short document (1-2 pages) explaining it in the terms you use with students could be a strong addition.</p>
     </div>
   </div>
 </div>
@@ -764,9 +843,9 @@
 <!-- ==========================================
      SLIDE 28 — LAYER 2: ASSIGNMENT MATERIALS
      ========================================== -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 28: Assignment Materials" data-slide="layer-assignment" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 27: Assignment Materials" data-slide="layer-assignment" tabindex="-1">
   <div class="content">
-    <span class="label label-cyan">Step 2</span>
+    <span class="label label-cyan">Type 2</span>
     <h2>Assignment Materials</h2>
     <p>Upload the documents that define the current task. The model needs to know what students are working on, how they&rsquo;re graded, and where they typically struggle.</p>
     <ul style="margin-top: 1em; line-height: 1.9;">
@@ -784,7 +863,7 @@
    - The actual assignment instructions
 
 2. [assignment]-rubric.pdf
-   - Grading criteria with level descriptions
+   - Evaluation criteria with level descriptions
 
 3. common-feedback.txt
    - 5-10 patterns you see every semester
@@ -794,7 +873,7 @@
    - Anonymized excerpts showing what good work looks like</pre>
     </div>
     <div class="tip-box" style="margin-top: 1.2em;">
-      <p><strong>Your turn:</strong> Pick one assignment. Upload the prompt and rubric. Then write a short list of the feedback you give most often.</p>
+      <p><strong>Consider:</strong> Which assignment would benefit most? The prompt, rubric, and a short list of your most common feedback patterns would be a strong starting point.</p>
     </div>
   </div>
 </div>
@@ -802,9 +881,9 @@
 <!-- ==========================================
      SLIDE 29 — LAYER 3: SOURCE MATERIALS
      ========================================== -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 29: Source Materials" data-slide="layer-sources" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 28: Source Materials" data-slide="layer-sources" tabindex="-1">
   <div class="content">
-    <span class="label label-cyan">Step 3</span>
+    <span class="label label-cyan">Type 3</span>
     <h2>Source Materials</h2>
     <p>Upload the readings and reference materials students are working with in the current unit. This grounds the model in the actual texts.</p>
     <ul style="margin-top: 1em; line-height: 1.9;">
@@ -831,84 +910,108 @@
    - Whatever students consult during the assignment</pre>
     </div>
     <div class="tip-box" style="margin-top: 1.2em;">
-      <p><strong>Your turn:</strong> Upload 1-3 readings for your chosen assignment. If they&rsquo;re in a single PDF reader, split them into separate files first.</p>
+      <p><strong>Consider:</strong> Which readings or sources are students working with right now? Individual files retrieve better than a single combined PDF.</p>
     </div>
   </div>
 </div>
 
 <!-- ==========================================
-     SLIDE 30 — CONNECTING PROMPT + COLLECTION
+     SLIDE 29 — CREATE YOUR COLLECTION
      ========================================== -->
-<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 30: Prompt plus Collection" data-slide="prompt-plus-collection" tabindex="-1">
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 29: Create Your Collection" data-slide="create-collection" tabindex="-1">
   <div class="content">
     <span class="label label-cyan">Putting It Together</span>
-    <h2>Prompt + Collection</h2>
-    <p style="margin-bottom: 0.8em;">Your system prompt and knowledge collection work together. The prompt defines <em>behavior</em>. The collection provides <em>context</em>.</p>
-    <div class="card card-cyan" style="margin-bottom: 0.6em;">
-      <h4>System Prompt Says:</h4>
-      <p>&ldquo;Request the assignment prompt and student draft before responding. Identify the highest-priority concerns before surface-level issues.&rdquo;</p>
+    <h2>Create Your Collection</h2>
+    <p style="margin-bottom: 0.8em;">Now create the collection you&rsquo;ve been thinking about.</p>
+    <div class="card card-cyan step-hidden" data-step="1" style="margin-bottom: 0.5em;">
+      <h4>1. Go to Workspace &rarr; Knowledge</h4>
+      <p>Click <strong>+ New Knowledge</strong> to start a new collection.</p>
     </div>
-    <div class="card" style="margin-bottom: 0.6em;">
-      <h4>Knowledge Collection Provides:</h4>
-      <p>The actual assignment prompt, rubric, common feedback patterns, and style guide the model references when following those instructions.</p>
+    <div class="card step-hidden" data-step="2" style="margin-bottom: 0.5em;">
+      <h4>2. Name and describe it</h4>
+      <p>Give it a clear name tied to your course and a short description of what it contains.</p>
     </div>
-    <div class="tip-box">
-      <p><strong>Test it:</strong> Ask the model a question only answerable from your collection. If it gives generic advice, the retrieval isn&rsquo;t working. Check your document structure.</p>
+    <div class="card card-navy step-hidden" data-step="3" style="margin-bottom: 0.5em;">
+      <h4>3. Upload your first file</h4>
+      <p>Start with whichever document you identified as you worked through the three types: course context, assignment materials, or source materials.</p>
     </div>
   </div>
-  <div class="stage" style="background: var(--bg-light); flex-direction: column; padding: clamp(16px, 2.5vw, 32px); justify-content: center;">
-    <div style="display: flex; flex-direction: column; gap: clamp(10px, 1.5vh, 18px); width: 100%; max-width: 300px; margin: 0 auto;">
-      <div class="flow-node flow-prompt" style="width: 100%;">
-        <div class="flow-node-code" style="font-size: 0.78rem;">System Prompt</div>
-        <div class="flow-node-desc" style="font-family: 'JetBrains Mono', monospace; color: var(--accent-cyan); margin-top: 2px; font-size: 0.62rem;">How to behave</div>
+  <div class="stage">
+    <div class="carousel" data-interval="8000">
+      <div class="carousel-item active">
+        <img src="images/slide4-a.png" alt="Workspace Knowledge tab showing collections and New Knowledge button">
+        <div class="carousel-caption"><strong>Workspace &rarr; Knowledge</strong><br>Click <strong>+ New Knowledge</strong> to create a collection.</div>
       </div>
-      <div style="text-align: center; font-size: 0.9rem; color: var(--accent-cyan); font-weight: 700;">+</div>
-      <div class="flow-node" style="width: 100%; background: var(--dark-bg-lighter); border: 2px solid var(--accent-blue); border-radius: 12px;">
-        <div class="flow-node-code" style="font-size: 0.78rem; color: var(--light-text);">Knowledge Collection</div>
-        <div class="flow-node-desc" style="font-family: 'JetBrains Mono', monospace; color: var(--accent-light-blue); margin-top: 2px; font-size: 0.62rem;">What to draw on</div>
+      <div class="carousel-item">
+        <img src="images/slide4-b.png" alt="Create a knowledge base form with name, description, and privacy settings">
+        <div class="carousel-caption"><strong>Name and Describe</strong><br>Give your collection a name and set access to private.</div>
       </div>
-      <div style="text-align: center; font-size: 0.9rem; color: var(--accent-green); font-weight: 700;">=</div>
-      <div class="flow-node" style="width: 100%; background: white; border: 2px solid var(--accent-green); border-radius: 12px; box-shadow: 0 4px 20px rgba(91, 138, 111, 0.15);">
-        <div class="flow-node-code" style="font-size: 0.78rem;">Custom Model</div>
-        <div class="flow-node-desc" style="color: var(--accent-green); margin-top: 2px; font-size: 0.62rem;">Grounded in your course</div>
-      </div>
+      <div class="carousel-dots"></div>
     </div>
   </div>
 </div>
 
 <!-- ==========================================
-     SLIDE — CLOSING (merged: was slides 31+32)
+     SLIDE 30 — ATTACH TO MODEL CARD
      ========================================== -->
-<div class="slide layout-full-dark closing-slide" role="group" aria-roledescription="slide" aria-label="Slide: Let's Build One Together" data-slide="closing" tabindex="-1">
-  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; gap: clamp(16px, 3vh, 32px); padding: clamp(20px, 4vw, 60px);">
-    <img src="images/logo-horizontal.png" alt="CUNY AI Lab" class="title-logo" style="max-width: 200px; opacity: 0.9;">
-    <h1 style="text-align: center; color: var(--light-text); font-size: clamp(1.6rem, 3.5vw, 2.6rem); margin: 0;">Let&rsquo;s Build One Together</h1>
-    <div class="roadmap" style="margin-top: 0; gap: clamp(8px, 1.2vw, 14px); width: 100%; max-width: 700px;">
-      <div class="roadmap-item" style="opacity: 0.55;">
-        <div class="week-label">March 16</div>
-        <h4>System Prompts &#10003;</h4>
-      </div>
-      <div class="roadmap-item" style="opacity: 0.55;">
-        <div class="week-label">March 23 &mdash; Today</div>
-        <h4>Knowledge Collections &#10003;</h4>
-      </div>
-      <div class="roadmap-item active">
-        <div class="week-label">March 30 &mdash; Next Week</div>
-        <h4>Skills &amp; Tools</h4>
-      </div>
+<div class="slide layout-split" role="group" aria-roledescription="slide" aria-label="Slide 30: Attach Your Collection" data-slide="attach-collection" tabindex="-1">
+  <div class="content">
+    <span class="label label-cyan">Final Step</span>
+    <h2>Attach Your Collection</h2>
+    <p style="margin-bottom: 0.8em;">Connect your collection to the model card you set up earlier.</p>
+    <div class="card card-cyan step-hidden" data-step="1" style="margin-bottom: 0.5em;">
+      <h4>1. Return to your model card</h4>
+      <p>Go to <strong>Workspace &rarr; Models</strong> and open the model card you created at the start of today&rsquo;s session.</p>
     </div>
-    <ol style="line-height: 2; padding-left: 1.4em; max-width: 440px; color: var(--light-text-50); margin: 0; font-size: clamp(0.85rem, 1.3vw, 1rem);">
-      <li>Open your model from last week in the Sandbox</li>
-      <li>Create a knowledge collection with 3&ndash;5 documents</li>
-      <li>Attach it to that model</li>
-      <li>Test it with a real student question</li>
-    </ol>
-    <p style="color: var(--light-text-50); font-size: 0.9rem; margin: 0;">ailab.gc.cuny.edu</p>
+    <div class="card step-hidden" data-step="2" style="margin-bottom: 0.5em;">
+      <h4>2. Attach the collection</h4>
+      <p>Find the <strong>Knowledge</strong> field and click <strong>Select Knowledge</strong>. Choose the collection you just created.</p>
+    </div>
+    <div class="card card-navy step-hidden" data-step="3" style="margin-bottom: 0.5em;">
+      <h4>3. Save and test</h4>
+      <p>Save the model card, open a new chat with your model, and ask a question only answerable from your collection.</p>
+    </div>
+  </div>
+  <div class="stage">
+    <div class="carousel" data-interval="8000">
+      <div class="carousel-item active">
+        <img src="images/slide4-c.png" alt="Workspace Models page listing custom models">
+        <div class="carousel-caption"><strong>Workspace &rarr; Models</strong><br>Open the model card you created earlier.</div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/slide4-d.png" alt="Model card editor with Knowledge section highlighted showing Select Knowledge and Upload Files">
+        <div class="carousel-caption"><strong>Attach Your Collection</strong><br>Click <strong>Select Knowledge</strong> to connect your collection to the model.</div>
+      </div>
+      <div class="carousel-dots"></div>
+    </div>
   </div>
 </div>
 
-<p class="meta" style="margin-top: 1.5em;">ailab.gc.cuny.edu</p>
+<!-- ==========================================
+     SLIDE 30 — THE ROAD AHEAD
+     ========================================== -->
+<div class="slide layout-full-dark closing-slide" role="group" aria-roledescription="slide" aria-label="Slide 30: The Road Ahead" data-slide="closing" tabindex="-1">
+  <span class="label label-cyan">Coming Up</span>
+  <h2>The Road Ahead</h2>
+  <div class="roadmap">
+    <div class="roadmap-item" style="opacity: 0.55;">
+      <div class="week-label">March 16</div>
+      <h4>System Prompts &#10003;</h4>
+      <p>Configured how the model responds and scaffolds learning</p>
+    </div>
+    <div class="roadmap-item" style="opacity: 0.55;">
+      <div class="week-label">March 23 (Today)</div>
+      <h4>Knowledge Collections &#10003;</h4>
+      <p>Grounded the model in your course materials so it can reference real documents</p>
+    </div>
+    <div class="roadmap-item active">
+      <div class="week-label">March 30 (Next Week)</div>
+      <h4>Skills &amp; Tools</h4>
+      <p>Build specialized skills, tools, and workflows tailored to your courses</p>
+    </div>
   </div>
+  <p style="color: var(--light-text-50); margin-top: 1.5em; max-width: 600px;">Each workshop builds on the last. The system prompt you wrote last week now drives a model grounded in the knowledge collection you built today. Next week, you&rsquo;ll extend it with custom skills and tools.</p>
+  <p style="color: var(--light-text-50); font-size: 0.9rem; margin-top: 1em;"><a href="https://ailab.gc.cuny.edu" style="color: var(--accent-cyan); text-decoration: underline; text-underline-offset: 3px;">ailab.gc.cuny.edu</a></p>
 </div>
 
 </div><!-- /deck -->
@@ -917,7 +1020,7 @@
 <nav id="nav-bar" aria-label="Slide navigation">
   <button id="arrow-prev" class="arrow-btn" aria-label="Previous slide" title="Previous slide (&larr;)">&#8592;</button>
   <span class="nav-info"><strong id="nav-current">1</strong> / <span id="nav-total"></span></span>
-  <div id="scrubber-container" class="scrubber-container" role="slider" aria-label="Slide progress" aria-valuemin="1" aria-valuemax="28" aria-valuenow="1" aria-valuetext="Slide 1 of 28" tabindex="0">
+  <div id="scrubber-container" class="scrubber-container" role="slider" aria-label="Slide progress" aria-valuemin="1" aria-valuemax="30" aria-valuenow="1" aria-valuetext="Slide 1 of 30" tabindex="0">
     <div class="scrubber-track">
       <div id="scrubber-progress" class="scrubber-progress"></div>
       <div class="scrubber-thumb">
@@ -942,6 +1045,7 @@ function copyTemplate(id) {
 </script>
 <script src="js/tabs.js"></script>
 <script src="js/carousel.js"></script>
+<script src="js/step-carousel.js"></script>
 <script src="js/scrubber.js"></script>
 <script src="js/deck-engine.js"></script>
 </body>

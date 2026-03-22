@@ -1,11 +1,12 @@
-# Curating Knowledge Collections - Slide Deck Content
+# Curating Knowledge Collections -- Slide Deck Content
 
 > CUNY AI Lab Sandbox Workshop
 > Source: `index.html`
+> Upstream: <https://github.com/CUNY-AI-Lab/knowledge-collections>
 
 ---
 
-## Slide 1 - Title
+## Slide 1 -- Title (`title-slide`)
 
 **Curating Knowledge Collections**
 A Workshop for the CUNY AI Lab Sandbox
@@ -13,41 +14,102 @@ March 23, 2026
 
 ---
 
-## Slide 2 - Workshop Roadmap
+## Slide 2 -- Workshop Roadmap (`layout-full-dark`)
 
 **Three Weeks, Three Skills**
 
 | Date | Session | Description |
 |------|---------|-------------|
-| March 16 - Last Week | Composing System Prompts ✓ | Learned how system prompts can help orchestrate and constrain AI models to address specific course goals |
-| March 23 - This Week | Curating Knowledge Collections | Upload syllabi, readings, and relevant sources to ground AI models in course materials |
+| March 16 (Last Week) | Composing System Prompts &#10003; | Learned how system prompts can help orchestrate and constrain AI models to address specific course goals |
+| March 23 (This Week) | Curating Knowledge Collections | Upload syllabi, readings, and relevant sources to ground AI models in course materials |
 | March 30 | Customizing Skills & Tools | Build specialized skills, tools, and workflows tailored to your courses |
 
 ---
 
-## Slide 3 - What Is a Knowledge Collection?
+## Slide 3 -- Sign In and Navigate to Workspace (`layout-content`)
 
-**The Basics**
+**Label:** Getting Started
 
-A **knowledge collection** is a set of documents you upload to ground an AI model in specific course materials. The model draws on these documents when responding to students.
+Before we begin, make sure you can access the CUNY AI Lab Sandbox.
+
+1. Go to chat.ailab.gc.cuny.edu and sign in with your CUNY account
+2. Open **Workspace** (top left, three rows below "New Chat")
+
+**Next:** Once you're signed in and can see the Workspace menu, you're ready to set up your model card on the next slide.
+
+---
+
+## Slide 4 -- Set Up Your Model Card (`layout-split`)
+
+**Label:** Before We Start
+
+Knowledge collections attach to a model card in Workspace > Models. Complete these steps before we go further. The model card is the foundation everything else builds on today.
+
+1. **Go to Workspace > Models:** Click + New Model to create one, or open the model card you built last week
+2. **Name the model card:** Give it a descriptive name tied to your course, for example ENGL 101 Writing Scaffold or History 202 Source Analysis Tool
+3. **Select a base model:** Choose a model from the Sandbox (DeepSeek, Qwen3, Llama, etc.)
+4. **Add your system prompt:** Scroll to System Prompt under Model Params. Paste the prompt you wrote last week.
+5. **Save your work:** Click the Save button. Your model card is now ready for a knowledge collection.
+
+**Keep this tab open.** You will return to this model card at the end of today's exercise to attach the knowledge collection you build.
+
+**Stage:** Single image -- `slide4-c.png` (Workspace > Models landing page)
+
+---
+
+## Slide 5 -- Test Your Model in Chat (`layout-split`)
+
+**Label:** Dry Run
+
+Your model is saved. Now test it to make sure it responds as expected before attaching a knowledge collection.
+
+1. Click **New Chat** in the top left
+2. Click the **model selector** dropdown at the top of the chat
+3. Choose your newly created model from the list
+4. Send a test message related to your course and observe the response
+
+**Look for:** Does the model respond in the voice you configured? Does your system prompt shape the tone and approach of the answer?
+
+**Stage:** Screenshot placeholder (testing a custom model in chat)
+
+---
+
+## Slide 6 -- What Is a Knowledge Collection? (`layout-split`)
+
+**Label:** The Basics
+
+A **knowledge collection** is a set of documents you upload to ground an AI model in specific course materials. The model retrieves relevant passages from these documents when responding to students.
 
 > Think of it as the **reading list** for your AI tool: the sources it can reference, the assignments it knows about, and the disciplinary context it works within.
 
 **Key distinction:** The *system prompt* tells the model how to behave. The *knowledge collection* tells it what to draw on. Together, they create a tool grounded in your teaching context.
 
----
-
-## Slide 4 - Where It Lives (Workspace)
-
-Knowledge collections are managed from the Workspace menu. When you attach a collection to a model card, the model can draw on those documents to answer questions. Your system prompt tells the model when and how to use them.
-
-- **Workspace → Knowledge** is where you build and manage collections.
-- **Workspace → Models** is where you attach a collection to a model card.
-- In chat, you can also pull in a collection on the fly by typing `#` followed by its name.
+**Your model is ready. Now give it something to draw on.** By the end of today, your knowledge collection will be attached directly to the model you just opened.
 
 ---
 
-## Slide 5 - Why Knowledge Collections Matter
+## Slide 7 -- Where It Lives (`layout-split`)
+
+**Label:** Open WebUI
+
+Your model is open. Now you need two things to attach to it:
+
+- **Step 1 (already done):** Your Model File is open in Workspace > Models. System prompt is set. This is where the collection will attach.
+- **Step 2 (today):** Go to Workspace > Knowledge to create your collection. Upload PDFs and documents, then return to your model to attach it under Knowledge.
+
+**Order matters:** Model first, collection second. The system prompt defines behavior; the knowledge collection defines the source documents the model queries. Both live in the same model file.
+
+**Carousel:**
+- `slide4-c.png` -- Your Model: Already Open
+- `slide4-d.png` -- Where the Collection Attaches
+- `slide4-a.png` -- Create Your Collection: Step 1
+- `slide4-b.png` -- Create Your Collection: Step 2
+
+---
+
+## Slide 8 -- Why Knowledge Collections Matter (`layout-content`)
+
+**Label:** Why Bother?
 
 A student asks: **"What should I focus on for the midterm essay?"**
 
@@ -61,9 +123,11 @@ A student asks: **"What should I focus on for the midterm essay?"**
 
 ---
 
-## Slide 6 - What Can You Upload?
+## Slide 9 -- What Can You Upload? (`layout-full-dark`)
 
-Any document that helps the AI understand your course context. The model retrieves relevant passages when students ask questions.
+**Label:** Building Materials
+
+Any document that helps the AI understand your course context. The Sandbox runs on open-weight models with zero data retention: nothing you upload persists beyond the active session.
 
 | Document Type | Description |
 |---------------|-------------|
@@ -74,43 +138,43 @@ Any document that helps the AI understand your course context. The model retriev
 | Lecture Notes | Key concepts, frameworks, and terminology from your lectures |
 | Style Guides | Citation formats, disciplinary conventions, writing guidelines |
 | Sample Work | Anonymized exemplars that model the quality you expect |
+| Data Sets | Spreadsheets, CSV files, or structured data students analyze in labs or projects |
+| Glossaries | Discipline-specific terminology, definitions, and key concepts for the course |
+| Problem Sets | Exercises, practice questions, or worked examples with solutions |
+| Lab Protocols | Step-by-step procedures, safety guidelines, and equipment instructions |
+| Case Studies | Real-world scenarios, historical cases, or clinical examples used in coursework |
+
+**A note on data and access:** When a student asks a question, only the most relevant passages from your collection are retrieved and injected into that single prompt as context. The model reads those passages in the moment and cannot store or reproduce them outside the conversation. Your source materials are referenced, not exposed.
 
 ---
 
-## Slide 7 - Section Divider
+## Slide 10 -- How the Model Uses Your Documents (`layout-split`)
 
-**Under the Hood: How Retrieval Works**
+**Label:** Retrieval-Augmented Generation
 
----
+**Section label:** Under the Hood
 
-## Slide 8 - How the Model Uses Your Documents
-
-**Retrieval-Augmented Generation**
-
-When a student asks a question, the system doesn't feed the entire collection to the model. It searches for the most relevant passages and includes them alongside the conversation.
+When a student asks a question, the system doesn't feed the entire collection to the model. It searches for the most relevant passages and uses them as the basis for its response.
 
 - **Chunking:** Your documents are split into smaller passages when uploaded
 - **Search:** The student's question is matched against those passages
 - **Injection:** The top matches are included in the model's context window
 - **Response:** The model generates an answer grounded in those passages
 
-**Implication:** Short, focused documents with clear headings retrieve better than long, unstructured files. How you organize your materials matters.
+**Implication:** Short, focused documents with clear headings retrieve better than long, unstructured files. In other words, the way you organize your materials matters.
 
 ---
 
-## Slide 9 - Section Divider
+## Slide 11 -- What Makes a Good Knowledge Collection? (`layout-divider`)
 
-**Part I: What Makes a Good Knowledge Collection?**
-
----
-
-## Slide 10 - Section Divider
-
-**Example 1: Composition & Writing**
+**Section label:** Part I: Example 1
+Starting with Composition & Writing
 
 ---
 
-## Slide 11 - Composition: The Bare Minimum
+## Slide 12 -- Composition: The Bare Minimum (`layout-content`)
+
+**Label:** Composition & Writing (progression: 1 of 3)
 
 **Weak:** Collection contains only `syllabus.pdf` (14 pages)
 
@@ -121,7 +185,9 @@ When a student asks a question, the system doesn't feed the entire collection to
 
 ---
 
-## Slide 12 - Composition: Getting Warmer
+## Slide 13 -- Composition: Getting Warmer (`layout-content`)
+
+**Label:** Composition & Writing (progression: 2 of 3)
 
 **Getting There:** Collection contains syllabus.pdf, essay-1-prompt.pdf, essay-1-rubric.pdf, mla-style-guide.pdf
 
@@ -137,23 +203,27 @@ When a student asks a question, the system doesn't feed the entire collection to
 
 ---
 
-## Slide 13 - Composition: A Collection That Grounds Revision
+## Slide 14 -- A Collection That Grounds Revision (`layout-content`)
+
+**Label:** Composition & Writing (progression: 3 of 3)
 
 **Strong collection with three layers:**
 
 Course Framework: syllabus.pdf, revision-philosophy.txt
-Assignment Materials: essay-1-prompt.pdf, essay-1-rubric.pdf, common-feedback.txt
+Assignment Materials (Essay 1: Rhetoric in Popular Media): essay-1-prompt.pdf, essay-1-rubric.pdf, common-feedback.txt
 Reference Materials: mla-style-guide.pdf, strong-intro-examples.txt, revision-checklist.pdf
 
 ---
 
-## Slide 14 - Section Divider
+## Slide 15 -- Primary Source Analysis (`layout-divider`)
 
-**Example 2: Primary Source Analysis**
+**Section label:** Example 2
 
 ---
 
-## Slide 15 - History: The Bare Minimum
+## Slide 16 -- History: The Bare Minimum (`layout-content`)
+
+**Label:** History (progression: 1 of 3)
 
 **Weak:** Collection contains only `textbook-chapter-12.pdf` (42 pages)
 
@@ -164,9 +234,11 @@ Reference Materials: mla-style-guide.pdf, strong-intro-examples.txt, revision-ch
 
 ---
 
-## Slide 16 - History: Getting Warmer
+## Slide 17 -- History: Getting Warmer (`layout-content`)
 
-**Getting There:** Collection contains syllabus.pdf, source-analysis-assignment.pdf, primary-source-1.pdf, primary-source-2.pdf
+**Label:** History (progression: 2 of 3)
+
+**Getting There:** Collection contains syllabus.pdf, source-analysis-assignment.pdf, primary-source-1.pdf (Freedmen's Bureau report, 1866), primary-source-2.pdf (Congressional testimony, 1871)
 
 **What improved?**
 - Includes actual primary sources students are working with
@@ -180,23 +252,27 @@ Reference Materials: mla-style-guide.pdf, strong-intro-examples.txt, revision-ch
 
 ---
 
-## Slide 17 - History: A Collection That Fosters Historical Thinking
+## Slide 18 -- A Collection That Fosters Historical Thinking (`layout-content`)
+
+**Label:** History (progression: 3 of 3)
 
 **Strong collection with three layers:**
 
 Course Framework: syllabus.pdf, soaps-framework.txt, source-analysis-rubric.pdf
-Primary Sources: freedmens-bureau-report-1866.pdf (with metadata), congressional-testimony-1871.pdf (with metadata), source-context-notes.txt
+Primary Sources (Reconstruction Unit): freedmens-bureau-report-1866.pdf (with metadata), congressional-testimony-1871.pdf (with metadata), source-context-notes.txt
 Reference Materials: period-timeline.txt, common-analysis-errors.txt, chicago-citation-guide.pdf
 
 ---
 
-## Slide 18 - Section Divider
+## Slide 19 -- Close Reading & Literary Analysis (`layout-divider`)
 
-**Example 3: Close Reading & Literary Analysis**
+**Section label:** Example 3
 
 ---
 
-## Slide 19 - Literature: The Bare Minimum
+## Slide 20 -- Literature: The Bare Minimum (`layout-content`)
+
+**Label:** Literature & Cultural Studies (progression: 1 of 3)
 
 **Weak:** Collection contains only `course-reader.pdf` (180 pages)
 
@@ -207,7 +283,9 @@ Reference Materials: period-timeline.txt, common-analysis-errors.txt, chicago-ci
 
 ---
 
-## Slide 20 - Literature: Getting Warmer
+## Slide 21 -- Literature: Getting Warmer (`layout-content`)
+
+**Label:** Literature & Cultural Studies (progression: 2 of 3)
 
 **Getting There:** Collection contains syllabus.pdf, close-reading-assignment.pdf, sonny-blues-baldwin.pdf, new-criticism-overview.pdf
 
@@ -223,121 +301,188 @@ Reference Materials: period-timeline.txt, common-analysis-errors.txt, chicago-ci
 
 ---
 
-## Slide 21 - Literature: A Collection That Fosters Close Reading
+## Slide 22 -- A Collection That Fosters Close Reading (`layout-content`)
+
+**Label:** Literature & Cultural Studies (progression: 3 of 3)
 
 **Strong collection with three layers:**
 
 Course Framework: syllabus.pdf, new-criticism-framework.txt, literary-terms-glossary.txt
-Assignment Materials: close-reading-assignment.pdf, close-reading-rubric.pdf, annotated-passage-example.txt
-Literary Texts: sonny-blues-baldwin.pdf, passage-selections.txt
+Assignment Materials (Close Reading Essay): close-reading-assignment.pdf, close-reading-rubric.pdf, annotated-passage-example.txt
+Literary Texts (Current Unit): sonny-blues-baldwin.pdf, passage-selections.txt
 
 ---
 
-## Slide 22 - Section Divider
+## Slide 23 -- Curation Best Practices (`layout-grid`)
 
-**Part II: Building Your Collection**
+**Section label:** Part II
 
----
-
-## Slide 23 - Components of a Knowledge Collection
-
-Every effective collection has three layers:
-
-1. **Course Context** — Syllabus, calendar, and related course documents
-2. **Assignment Materials** — Instructions, lesson plans scaffolding the assignment, examples of preferred feedback patterns
-3. **Source Materials** — Readings, primary sources, and reference documents for the current mini-unit, module, or class session
+- **One Document, One Purpose:** Upload separate files for syllabus, rubric, readings, and frameworks. The model retrieves better from focused documents than from large omnibus files.
+- **Add Metadata and Headings:** Include titles, authors, dates, and clear section headings. These act as retrieval anchors that help the model find the right passage.
+- **Write What the Model Can't Infer:** The model doesn't know your pedagogical intent. A short "common-feedback.txt" or "context-notes.txt" written in your own words is more valuable than another PDF.
+- **Update Per Unit:** Swap readings and assignment materials as the semester progresses. A collection grounded in the current unit is more useful than one covering the whole course.
 
 ---
 
-## Slide 24 - Layer 1: Course Framework
+## Slide 24 -- Common Pitfalls (`layout-content`)
 
-Start with the documents that establish your course's identity.
+**Label:** Watch Out
 
-**Template:**
-- syllabus.pdf (under 10 pages if possible)
-- [framework-name].txt — the analytical method students use
-
-**Your turn:** What framework or methodology is central to your course? Write a short document explaining it.
-
----
-
-## Slide 25 - Layer 2: Assignment Materials
-
-Upload the documents that define the current task.
-
-**Template:**
-- [assignment]-prompt.pdf
-- [assignment]-rubric.pdf
-- common-feedback.txt (5-10 patterns)
-- strong-examples.txt (optional)
-
-**Your turn:** Pick one assignment. Upload the prompt and rubric. Write a list of common feedback.
+- **Dumping Everything In:** Uploading every reading for the entire semester dilutes retrieval quality. More documents means more noise. Start small and add materials as you test.
+- **One Giant PDF:** A 200-page course reader retrieves unpredictably. Split it into individual texts. Short, well-labeled documents retrieve far better than long ones.
+- **Forgetting the System Prompt:** A knowledge collection without a system prompt is a pile of documents with no instructions. The system prompt tells the model how to use the materials.
+- **Assuming the Model Read Everything:** The model only sees retrieved passages, not the full document. If something is critical, make it easy to retrieve: put it in its own file with a clear heading.
 
 ---
 
-## Slide 26 - Layer 3: Source Materials
+## Slide 25 -- Build Your Collection (`layout-content`)
 
-Upload the readings and reference materials for the current unit.
+**Section label:** Part III: Hands-On
+**Label:** Exercise
 
-**Template:**
-- [reading-title].pdf (individual files per text)
-- context-notes.txt (2-3 sentences per source)
-- [reference-guide].pdf
+Pick one assignment from your course. You will build a knowledge collection for it, one layer at a time.
 
-**Your turn:** Upload 1-3 readings. If they're in a single PDF reader, split them first.
+**Step 0: Your model is already open.** You configured it at the start of the workshop. Keep it in a second tab. You'll attach your collection to it at the end of this exercise.
 
----
-
-## Slide 27 - Section Divider
-
-**Part III: Best Practices & Pitfalls**
+1. **Course Framework:** Syllabus, learning objectives, and the analytical framework students use
+2. **Assignment Materials:** Prompts, rubrics, examples, and common feedback patterns
+3. **Source Materials:** Readings, primary sources, and reference documents for the current unit
 
 ---
 
-## Slide 28 - Curation Best Practices
+## Slide 26 -- Layer 1: Course Framework (`layout-split`)
 
-- **One Document, One Purpose** — The model retrieves better from focused documents
-- **Add Metadata and Headings** — Titles, authors, dates act as retrieval anchors
-- **Write What the Model Can't Infer** — Instructor notes are more valuable than another PDF
-- **Update Per Unit** — Swap materials as the semester progresses
+**Label:** Step 1
+
+Start with the documents that establish your course's identity: what students are learning, how they're assessed, and what methods they use.
+
+- What are the course's learning objectives?
+- What analytical framework or methodology do students use?
+- What are the course policies the model should know about?
+
+**Template (copyable):**
+```
+Recommended uploads:
+
+1. syllabus.pdf
+   - Course schedule, objectives, and policies
+   - Tip: Keep it under 10 pages if possible
+
+2. [framework-name].txt
+   - The analytical method students use
+   - E.g., SOAPS, New Criticism, revision checklist
+   - Write it out in plain language with definitions
+```
+
+**Your turn:** What framework or methodology is central to your course? Write a short document (1-2 pages) explaining it in the terms you use with students.
 
 ---
 
-## Slide 29 - Common Pitfalls
+## Slide 27 -- Layer 2: Assignment Materials (`layout-split`)
 
-- **Dumping Everything In** — More documents means more noise
-- **One Giant PDF** — Split into individual texts
-- **Forgetting the System Prompt** — A collection without a prompt is a pile of documents
-- **Assuming the Model Read Everything** — It only sees retrieved passages
+**Label:** Step 2
+
+Upload the documents that define the current task. The model needs to know what students are working on, how they're graded, and where they typically struggle.
+
+- What is the assignment prompt?
+- What does the rubric prioritize?
+- What feedback do you give most often?
+
+**Template (copyable):**
+```
+Recommended uploads:
+
+1. [assignment]-prompt.pdf
+   - The actual assignment instructions
+
+2. [assignment]-rubric.pdf
+   - Grading criteria with level descriptions
+
+3. common-feedback.txt
+   - 5-10 patterns you see every semester
+   - E.g., "Thesis too broad," "Evidence cited but not analyzed"
+
+4. strong-examples.txt (optional)
+   - Anonymized excerpts showing what good work looks like
+```
+
+**Your turn:** Pick one assignment. Upload the prompt and rubric. Then write a short list of the feedback you give most often.
 
 ---
 
-## Slide 30 - Prompt + Collection
+## Slide 28 -- Layer 3: Source Materials (`layout-split`)
 
-Your system prompt and knowledge collection work together. The prompt defines behavior. The collection provides context.
+**Label:** Step 3
 
-**Test it:** Ask the model a question only answerable from your collection. If it gives generic advice, check your document structure.
+Upload the readings and reference materials students are working with in the current unit. This grounds the model in the actual texts.
+
+- What texts are students reading for this assignment?
+- Are there reference documents (timelines, glossaries, citation guides)?
+- Can you add brief metadata or context for each source?
+
+**Template (copyable):**
+```
+Recommended uploads:
+
+1. [reading-title].pdf
+   - Individual files per text (not one big reader)
+   - Add a header with: title, author, date, source
+
+2. context-notes.txt (optional)
+   - 2-3 sentences of context per source
+   - Helps the model answer "why does this matter?"
+
+3. [reference-guide].pdf
+   - Citation style guide, glossary, timeline
+   - Whatever students consult during the assignment
+```
+
+**Your turn:** Upload 1-3 readings for your chosen assignment. If they're in a single PDF reader, split them into separate files first.
 
 ---
 
-## Slide 31 - The Road Ahead
+## Slide 29 -- Prompt + Collection (`layout-split`)
+
+**Label:** Putting It Together
+
+Your system prompt and knowledge collection work together. The prompt defines *behavior*. The collection provides *context*.
+
+**System Prompt:**
+"You are a writing revision scaffold for ENGL 101. When a student shares a draft, ask them to identify which rubric criterion they want to work on first. Reference the rubric and common-feedback documents before responding."
+
+**Knowledge Collection:**
+syllabus.pdf, revision-philosophy.txt, essay-1-prompt.pdf, essay-1-rubric.pdf, common-feedback.txt, mla-style-guide.pdf, strong-intro-examples.txt
+
+**Test it:** Ask the model a question only answerable from your collection. If it gives generic advice, the retrieval isn't working. Check your document structure.
+
+---
+
+## Slide 30 -- The Road Ahead (`layout-full-dark closing-slide`)
+
+**Label:** Coming Up
 
 | Date | Session | Description |
 |------|---------|-------------|
-| March 16 | System Prompts ✓ | Defining how the AI thinks and teaches |
-| March 23 - Today | Knowledge Collections ✓ | Grounding the AI in your course materials |
-| March 30 - Next Week | Skills & Tools | Build custom skills, tools, and workflows tailored to your courses |
+| March 16 | System Prompts &#10003; | Configured how the model responds and scaffolds learning |
+| March 23 (Today) | Knowledge Collections &#10003; | Grounded the model in your course materials so it can reference real documents |
+| March 30 (Next Week) | Skills & Tools | Build specialized skills, tools, and workflows tailored to your courses |
+
+Each workshop builds on the last. The system prompt you wrote last week now drives a model grounded in the knowledge collection you built today. Next week, you'll extend it with custom skills and tools.
+
+ailab.gc.cuny.edu
 
 ---
 
-## Slide 32 - Closing
+_Last synced: 2026-03-22. Upstream: CUNY-AI-Lab/knowledge-collections @ main. Update both files together._
 
-**Let's Build One Together**
-Open the CUNY AI Lab Sandbox and curate a knowledge collection for your course
+## Changelog
 
-1. Pick one assignment from your course
-2. Create a knowledge collection with 3-5 documents
-3. Attach it to a custom model with your system prompt
-4. Test it with a real student question
-
-ailab.gc.cuny.edu
+### 2026-03-22
+- Full SLIDES.md rewrite to sync with index.html (30 slides)
+- Heading format standardized: `## Slide N -- Title (\`layout-class\`)`
+- Added slides 3-5 (model setup workflow from commit 6cd0370)
+- Added upstream URL to header blockquote
+- Replaced em dashes in rendered content with colons
+- Added data-privacy note to slide 9 (What Can You Upload?)
+- Added sync timestamp and changelog section
+- Section dividers previously listed separately (old slides 9, 11, 12, 16, 20, 24, 29) are now folded into adjacent content slides; this file reflects the merged HTML structure

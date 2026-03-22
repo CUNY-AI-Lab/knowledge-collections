@@ -43,6 +43,37 @@
         var c = carousels.get(slideIndex);
         setCarouselIndex(slideIndex, (c.current + 1) % c.items.length);
       });
+
+      // Touch/swipe support for mobile
+      var touchStartX = 0;
+      var touchEndX = 0;
+
+      carousel.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+      }, false);
+
+      carousel.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe(slideIndex);
+      }, false);
+
+      function handleSwipe(idx) {
+        var swipeThreshold = 50; // Minimum pixels to register as swipe
+        var diff = touchStartX - touchEndX;
+
+        if (Math.abs(diff) < swipeThreshold) return;
+
+        var c = carousels.get(idx);
+        if (!c) return;
+
+        if (diff > 0) {
+          // Swiped left - next image
+          setCarouselIndex(idx, (c.current + 1) % c.items.length);
+        } else {
+          // Swiped right - previous image
+          setCarouselIndex(idx, (c.current - 1 + c.items.length) % c.items.length);
+        }
+      }
     });
   }
 

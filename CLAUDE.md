@@ -10,7 +10,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Workshop 2 of a 3-part CUNY AI Lab faculty series (system prompts → knowledge collections → agentic tools). Single-page HTML slide deck (32 slides), no build system, no npm dependencies — open `index.html` directly in a browser.
+Workshop 2 of a 3-part CUNY AI Lab faculty series (system prompts → knowledge collections → agentic tools). Single-page HTML slide deck (30 slides), no build system, no npm dependencies — open `index.html` directly in a browser.
 
 - **Live:** https://cuny-ai-lab.github.io/knowledge-collections/
 - **Deployed via:** GitHub Pages from `main` branch (root `/`)
@@ -57,12 +57,13 @@ Custom deck engine, no framework.
 The deck follows this arc:
 
 1. **Title + Roadmap** (slides 1-2)
-2. **What / Where / Why** (slides 3-6) — what a knowledge collection is, where it lives in Open WebUI, why it matters, what you can upload
-3. **How Retrieval Works** (slides 7-8) — RAG explanation with flow diagram
-4. **Part I: What Makes a Good Collection?** (slides 9-21) — three discipline examples (Composition, History, Literature), each with weak → getting warmer → strong progression
-5. **Part II: Best Practices & Pitfalls** (slides 22-24) — curation guidelines and common mistakes
-6. **Part III: Hands-On Exercise** (slides 25-29) — three-step guided build (Course Framework, Assignment Materials, Source Materials) with copyable templates
-7. **Prompt + Collection / Road Ahead / Closing** (slides 30-32)
+2. **Model Setup** (slides 3-5) — sign in, create model card, test in chat, condensed pre-flight
+3. **What / Where / Why / Upload** (slides 6-9) — what a knowledge collection is, where it lives, why it matters, what you can upload
+4. **How Retrieval Works** (slide 10) — RAG explanation with flow diagram
+5. **Part I: What Makes a Good Collection?** (slides 11-22) — three discipline examples (Composition, History, Literature), each with weak → getting warmer → strong progression
+6. **Part II: Best Practices & Pitfalls** (slides 23-24) — curation guidelines and common mistakes
+7. **Part III: Hands-On Exercise** (slides 25-28) — three-step guided build (Course Framework, Assignment Materials, Source Materials) with copyable templates
+8. **Prompt + Collection / Closing** (slides 29-30)
 
 ## Slide Layouts
 
