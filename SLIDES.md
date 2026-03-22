@@ -43,7 +43,7 @@ Before we begin, make sure you can access the CUNY AI Lab Sandbox.
 
 **Label:** Before We Start
 
-Knowledge collections attach to a model card in Workspace > Models. Complete these steps before we go further. The model card is the foundation everything else builds on today.
+Knowledge collections attach to a model card in Workspace > Models. After you build your collection, complete these steps to bring everything together.
 
 1. **Go to Workspace > Models:** Click + New Model to create one, or open the model card you built last week
 2. **Name the model card:** Give it a descriptive name tied to your course, for example ENGL 101 Writing Scaffold or History 202 Source Analysis Tool
@@ -127,7 +127,7 @@ A student asks: **"What should I focus on for the midterm essay?"**
 
 **Label:** Building Materials
 
-Any document that helps the AI understand your course context. The Sandbox runs on open-weight models with zero data retention: nothing you upload persists beyond the active session.
+Uploaded files ground AI models in context and help shape their responses. These documents are stored on CUNY's self-hosted servers and made private by default.
 
 | Document Type | Description |
 |---------------|-------------|
@@ -158,8 +158,8 @@ When a student asks a question, the system doesn't feed the entire collection to
 
 - **Chunking:** Your documents are split into smaller passages when uploaded
 - **Search:** The student's question is matched against those passages
-- **Injection:** The top matches are included in the model's context window
-- **Response:** The model generates an answer grounded in those passages
+- **Injection:** Closest matches appended to model's context window
+- **Response:** Model generates output grounded in retrieved passages
 
 **Implication:** Short, focused documents with clear headings retrieve better than long, unstructured files. In other words, the way you organize your materials matters.
 
