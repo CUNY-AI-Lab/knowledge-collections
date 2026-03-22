@@ -102,7 +102,7 @@
   <div class="content">
     <span class="label label-cyan">The Basics</span>
     <h2>What Is a Knowledge Collection?</h2>
-    <p style="margin-bottom: 0.8em;">A <strong>knowledge collection</strong> is a set of documents you upload to ground an AI model in specific course materials. The model draws on these documents when responding to students.</p>
+    <p style="margin-bottom: 0.8em;">A <strong>knowledge collection</strong> is a set of documents you upload to ground an AI model in specific course materials. The model retrieves relevant passages from these documents when responding to students.</p>
     <blockquote>Think of it as the <strong>reading list</strong> for your AI tool: the sources it can reference, the assignments it knows about, and the disciplinary context it works within.</blockquote>
     <div class="tip-box" style="margin-top: 1em;">
       <p><strong>Key distinction:</strong> The <em>system prompt</em> tells the model how to behave. The <em>knowledge collection</em> tells it what to draw on. Together, they create a tool grounded in your teaching context.</p>
@@ -146,7 +146,7 @@
         <div class="flow-node flow-model" style="width: 100%; margin: clamp(6px, 1vh, 10px) 0;">
           <div class="flow-node-icon" style="font-size: 1.3rem;" aria-hidden="true">&#129302;</div>
           <div class="flow-node-label" style="font-size: 0.82rem;">AI Model</div>
-          <div class="flow-node-desc" style="font-size: 0.68rem;">Draws on uploaded course materials</div>
+          <div class="flow-node-desc" style="font-size: 0.68rem;">Retrieves passages from uploaded course materials</div>
         </div>
         <div class="theater-conversation">
           <div class="theater-msg theater-msg-ai">
@@ -177,7 +177,7 @@
       <p>Go to <strong>Workspace &rarr; Knowledge</strong> to create your collection. Upload PDFs and documents, then return to your model to attach it under <strong>Knowledge</strong>.</p>
     </div>
     <div class="tip-box">
-      <p><strong>Order matters:</strong> Model first, collection second. The system prompt defines behavior; the knowledge collection defines what the model draws on. Both live in the same model file.</p>
+      <p><strong>Order matters:</strong> Model first, collection second. The system prompt defines behavior; the knowledge collection defines the source documents the model queries. Both live in the same model file.</p>
     </div>
   </div>
   <div class="stage">
@@ -291,7 +291,7 @@
     <span class="section-label" style="font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-cyan); margin-bottom: 0.3em; display: block;">Under the Hood</span>
     <span class="label label-cyan">Retrieval-Augmented Generation</span>
     <h2>How the Model Uses Your Documents</h2>
-    <p style="margin-bottom: 0.8em;">When a student asks a question, the system doesn&rsquo;t feed the <em>entire</em> collection to the model. It searches for the most relevant passages and grounds its answer in them.</p>
+    <p style="margin-bottom: 0.8em;">When a student asks a question, the system doesn&rsquo;t feed the <em>entire</em> collection to the model. It searches for the most relevant passages and uses them as the basis for its response.</p>
     <ul style="margin-top: 0.8em; line-height: 1.9;">
       <li><strong>Chunking:</strong> Your documents are split into smaller passages when uploaded</li>
       <li><strong>Search:</strong> The student&rsquo;s question is matched against those passages</li>
