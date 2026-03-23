@@ -137,7 +137,7 @@ Uploaded files ground AI models in context and help shape their responses. These
 | Course Readings | Primary sources, articles, chapters, and excerpts students are working with |
 | Lecture Notes | Key concepts, frameworks, and terminology from your lectures |
 | Style Guides | Citation formats, disciplinary conventions, writing guidelines |
-| Sample Work | Anonymized exemplars that model the quality you expect |
+| Sample Work | Exemplars that model the kinds of work you expect |
 | Data Sets | Spreadsheets, CSV files, or structured data students analyze in labs or projects |
 | Glossaries | Discipline-specific terminology, definitions, and key concepts for the course |
 | Problem Sets | Exercises, practice questions, or worked examples with solutions |
@@ -317,10 +317,18 @@ Literary Texts (Current Unit): sonny-blues-baldwin.pdf, passage-selections.txt
 
 **Section label:** Part II
 
-- **One Document, One Purpose:** Upload separate files for syllabus, rubric, readings, and frameworks. The model retrieves better from focused documents than from large omnibus files.
-- **Add Metadata and Headings:** Include titles, authors, dates, and clear section headings. These act as retrieval anchors that help the model find the right passage.
-- **Write What the Model Can't Infer:** The model doesn't know your pedagogical intent. A short "common-feedback.txt" or "context-notes.txt" written in your own words is more valuable than another PDF.
-- **Update Per Unit:** Swap readings and assignment materials as the semester progresses. A collection grounded in the current unit is more useful than one covering the whole course.
+- **One Document, One Purpose:**
+  - Upload separate files for syllabus, rubric, readings, and frameworks
+  - The model retrieves better from focused documents than from large omnibus files
+- **Add Metadata and Headings:**
+  - Include titles, authors, dates, and clear section headings
+  - These act as retrieval anchors that help the model find the right passage
+- **Supply What's Not in the Documents:**
+  - Your pedagogical intent isn't in the PDFs
+  - A short "common-feedback.txt" or "context-notes.txt" in your own words is more valuable than another PDF
+- **Update Per Unit:**
+  - Swap readings and assignment materials as the semester progresses
+  - A collection grounded in the current unit is more useful than one covering the whole course
 
 ---
 
@@ -328,10 +336,18 @@ Literary Texts (Current Unit): sonny-blues-baldwin.pdf, passage-selections.txt
 
 **Label:** Watch Out
 
-- **Dumping Everything In:** Uploading every reading for the entire semester dilutes retrieval quality. More documents means more noise. Start small and add materials as you test.
-- **One Giant PDF:** A 200-page course reader retrieves unpredictably. Split it into individual texts. Short, well-labeled documents retrieve far better than long ones.
-- **Forgetting the System Prompt:** A knowledge collection without a system prompt is a pile of documents with no instructions. The system prompt tells the model how to use the materials.
-- **Assuming the Model Read Everything:** The model only sees retrieved passages, not the full document. If something is critical, make it easy to retrieve: put it in its own file with a clear heading.
+- **Dumping Everything In:**
+  - Uploading every reading for the entire semester dilutes retrieval quality
+  - More documents means more noise; start small and add materials as you test
+- **One Giant PDF:**
+  - A 200-page course reader retrieves unpredictably
+  - Short, well-labeled documents retrieve far better than long ones
+- **Forgetting the System Prompt:**
+  - Your system prompt needs explicit instructions for drawing on the knowledge collection
+  - Without that guidance, the collection is just a pile of documents
+- **Assuming Full Coverage:**
+  - Only retrieved passages are included in each response, not the full document
+  - If something is critical, put it in its own file with a clear heading
 
 ---
 
@@ -342,11 +358,9 @@ Literary Texts (Current Unit): sonny-blues-baldwin.pdf, passage-selections.txt
 
 Pick one assignment from your course. You will build a knowledge collection for it, one layer at a time.
 
-**Step 0: Your model is already open.** You configured it at the start of the workshop. Keep it in a second tab. You'll attach your collection to it at the end of this exercise.
-
-1. **Course Context:** Syllabus, calendar
-2. **Assignment Materials:** Instructions, feedback examples
-3. **Source Materials:** Assigned readings, primary sources
+1. **Course Context:** Syllabus sections, weekly schedule
+2. **Assignment Materials:** Assignment instructions, feedback examples
+3. **Source Materials:** Excerpted readings, primary sources
 
 ---
 
@@ -354,11 +368,11 @@ Pick one assignment from your course. You will build a knowledge collection for 
 
 **Label:** Step 1
 
-Start with the documents that establish your course's identity: what students are learning, how they're assessed, and what methods they use.
+These documents give the model a picture of your course: its goals, structure, and the methods students are expected to use.
 
 - What are the course's learning objectives?
-- What analytical framework or methodology do students use?
-- What are the course policies the model should know about?
+- What analytical framework or methodology is central to the course?
+- What course-level context would help the model support those goals?
 
 **Template (copyable):**
 ```
@@ -366,11 +380,9 @@ Recommended uploads:
 
 1. syllabus.pdf
    - Course schedule, objectives, and policies
-   - Tip: Keep it under 10 pages if possible
 
 2. [framework-name].txt
    - The analytical method students use
-   - E.g., SOAPS, New Criticism, revision checklist
    - Write it out in plain language with definitions
 ```
 
@@ -382,31 +394,27 @@ Recommended uploads:
 
 **Label:** Step 2
 
-Upload the documents that define the current task. The model needs to know what students are working on, how they're graded, and where they typically struggle.
+These documents define the current task and help the model align its responses with your specific learning objectives.
 
-- What is the assignment prompt?
-- What does the rubric prioritize?
-- What feedback do you give most often?
+- What does the assignment ask students to do?
+- What does strong work on this assignment look like?
+- What patterns come up most often in your feedback?
 
 **Template (copyable):**
 ```
 Recommended uploads:
 
 1. [assignment]-prompt.pdf
-   - The actual assignment instructions
+   - The assignment instructions
 
-2. [assignment]-rubric.pdf
-   - Grading criteria with level descriptions
-
-3. common-feedback.txt
+2. common-feedback.txt
    - 5-10 patterns you see every semester
-   - E.g., "Thesis too broad," "Evidence cited but not analyzed"
 
-4. strong-examples.txt (optional)
-   - Anonymized excerpts showing what good work looks like
+3. strong-examples.txt (optional)
+   - Excerpts showing what strong work looks like
 ```
 
-**Your turn:** Pick one assignment. Upload the prompt and rubric. Then write a short list of the feedback you give most often.
+**Your turn:** Which assignment stands to benefit? Try curating assignment instructions alongside a shortlist of common feedback patterns for starters.
 
 ---
 
@@ -430,11 +438,9 @@ Recommended uploads:
 
 2. context-notes.txt (optional)
    - 2-3 sentences of context per source
-   - Helps the model answer "why does this matter?"
 
 3. [reference-guide].pdf
-   - Citation style guide, glossary, timeline
-   - Whatever students consult during the assignment
+   - Citation style guide, glossary, or timeline
 ```
 
 **Your turn:** Upload 1-3 readings for your chosen assignment. If they're in a single PDF reader, split them into separate files first.
