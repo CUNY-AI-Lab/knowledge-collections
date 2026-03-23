@@ -68,7 +68,7 @@ Your model is saved. Now test it to make sure it responds as expected before att
 3. Choose your newly created model from the list
 4. Send a test message related to your course and observe the response
 
-**Look for:** Does the model respond in the voice you configured? Does your system prompt shape the tone and approach of the answer?
+**Look for:** Does your custom model respond as expected? How has your system prompt shaped its output?
 
 **Stage:** Screenshot placeholder (testing a custom model in chat)
 
@@ -84,11 +84,11 @@ A **knowledge collection** is a set of documents you upload to ground an AI mode
 
 **Key distinction:** The *system prompt* tells the model how to behave. The *knowledge collection* tells it what to draw on. Together, they create a tool grounded in your teaching context.
 
-**Your model is ready. Now give it something to draw on.** By the end of today, your knowledge collection will be attached directly to the model you just opened.
+*Next we'll show you where to find knowledge collections in the Sandbox and how to curate and use them with pedagogical intent.*
 
 ---
 
-## Slide 7 -- Where It Lives (`layout-split`)
+## Slide 7 -- Where to Find Knowledge Collections (`layout-split`)
 
 **Label:** Open WebUI
 
@@ -343,7 +343,7 @@ Literary Texts (Current Unit): sonny-blues-baldwin.pdf, passage-selections.txt
 Pick one assignment from your course. You will build a knowledge collection for it, one layer at a time.
 
 1. **Course Context:** Syllabus sections, weekly schedule
-2. **Assignment Materials:** Assignment instructions, feedback examples
+2. **Assignment Materials:** Instructions, feedback examples
 3. **Source Materials:** Excerpted readings, primary sources
 
 ---
