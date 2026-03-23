@@ -115,11 +115,11 @@ A student asks: **"What should I focus on for the midterm essay?"**
 
 **Without Knowledge Collection** *(appears first)*
 "For a midterm essay, you should generally focus on your thesis statement, use evidence from your readings, and structure your argument clearly. Make sure to address counterarguments."
-*Generic advice. No awareness of the assignment, the rubric, or the course readings.*
+*Generic advice. No connection to the assignment or the course readings.*
 
 **With Knowledge Collection** *(revealed on next advance)*
-"Based on the assignment prompt, your essay should analyze one primary source from the Reconstruction unit using the SOAPS framework we practiced. The rubric weights evidence and sourcing at 40%. Which document are you considering?"
-*Grounded in the actual assignment, rubric, and course methodology.*
+"Based on the assignment prompt, your essay should analyze one primary source from the Reconstruction unit using the SOAPS framework we practiced. The prompt emphasizes evidence and sourcing. Which document are you considering?"
+*Grounded in the actual assignment and course methodology.*
 
 ---
 
@@ -179,9 +179,9 @@ Starting with Composition & Writing
 **Weak:** Collection contains only `syllabus.pdf` (14 pages)
 
 **What goes wrong?**
-- One large document retrieves poorly: the model pulls random passages instead of relevant ones
-- No assignment-specific materials for the model to reference
-- No rubric, no readings, no examples of what good work looks like
+- One large document retrieves poorly: retrieved passages are often irrelevant
+- No assignment context for the revision task
+- No readings or reference materials for the model to draw on
 
 ---
 
@@ -189,17 +189,17 @@ Starting with Composition & Writing
 
 **Label:** Composition & Writing (progression: 2 of 3)
 
-**Getting There:** Collection contains syllabus.pdf, essay-1-prompt.pdf, essay-1-rubric.pdf, mla-style-guide.pdf
+**Getting There:** Collection contains syllabus.pdf, essay-1-prompt.pdf, mla-style-guide.pdf
 
 **What improved?**
-- Separate documents for different purposes: the model can find the rubric when asked about grading
-- Assignment-specific prompt gives the model context for that unit
+- Separate documents let the model find what it needs
+- Assignment prompt gives the model context for the revision task
 - Style guide helps with formatting questions
 
 **What's still missing?**
 - No course readings for the model to reference during analysis
-- No examples of strong student work to model expectations
-- No instructor notes on common student challenges
+- No common feedback patterns to guide revision
+- No instructor notes on what substantive revision looks like in this course
 
 ---
 
@@ -210,7 +210,7 @@ Starting with Composition & Writing
 **Strong collection with three layers:**
 
 Course Framework: syllabus.pdf, revision-philosophy.txt
-Assignment Materials (Essay 1: Rhetoric in Popular Media): essay-1-prompt.pdf, essay-1-rubric.pdf, common-feedback.txt
+Assignment Materials (Essay 1: Rhetoric in Popular Media): essay-1-prompt.pdf, common-feedback.txt
 Reference Materials: mla-style-guide.pdf, strong-intro-examples.txt, revision-checklist.pdf
 
 ---
@@ -230,7 +230,7 @@ Reference Materials: mla-style-guide.pdf, strong-intro-examples.txt, revision-ch
 **What goes wrong?**
 - A full textbook chapter is too long and too general: retrieved passages are often irrelevant
 - No primary sources for the model to help students analyze
-- No methodological framework for the model to follow
+- No framework like SOAPS for the model to scaffold source analysis
 
 ---
 
@@ -247,7 +247,7 @@ Reference Materials: mla-style-guide.pdf, strong-intro-examples.txt, revision-ch
 
 **What's still missing?**
 - No contextual background for the model to draw on when students ask about the period
-- No rubric or analysis framework to guide the model's scaffolding
+- No SOAPS framework or equivalent to guide source analysis
 - No source metadata (author, date, document type) to support sourcing questions
 
 ---
@@ -258,7 +258,7 @@ Reference Materials: mla-style-guide.pdf, strong-intro-examples.txt, revision-ch
 
 **Strong collection with three layers:**
 
-Course Framework: syllabus.pdf, soaps-framework.txt, source-analysis-rubric.pdf
+Course Framework: syllabus.pdf, soaps-framework.txt
 Primary Sources (Reconstruction Unit): freedmens-bureau-report-1866.pdf (with metadata), congressional-testimony-1871.pdf (with metadata), source-context-notes.txt
 Reference Materials: period-timeline.txt, common-analysis-errors.txt, chicago-citation-guide.pdf
 
@@ -278,7 +278,7 @@ Reference Materials: period-timeline.txt, common-analysis-errors.txt, chicago-ci
 
 **What goes wrong?**
 - A 180-page file retrieves unpredictably: the model might pull from the wrong text entirely
-- No assignment context or analytical framework
+- No assignment context or close-reading framework
 - No separation between literary texts and critical essays
 
 ---
@@ -295,9 +295,9 @@ Reference Materials: period-timeline.txt, common-analysis-errors.txt, chicago-ci
 - Critical framework document gives the model methodological grounding
 
 **What's still missing?**
-- No rubric for the model to reference when guiding analysis
-- No examples of close-reading annotations or model analyses
-- No glossary of literary terms the course uses
+- No annotated examples showing how to move from observation to interpretation
+- No key terms for the current unit (e.g., tension, irony, ambiguity)
+- No instructor notes on what close reading looks like in this course
 
 ---
 
@@ -307,8 +307,8 @@ Reference Materials: period-timeline.txt, common-analysis-errors.txt, chicago-ci
 
 **Strong collection with three layers:**
 
-Course Framework: syllabus.pdf, new-criticism-framework.txt, literary-terms-glossary.txt
-Assignment Materials (Close Reading Essay): close-reading-assignment.pdf, close-reading-rubric.pdf, annotated-passage-example.txt
+Course Framework: syllabus.pdf, new-criticism-framework.txt
+Assignment Materials (Close Reading Essay): close-reading-assignment.pdf, annotated-passage-example.txt
 Literary Texts (Current Unit): sonny-blues-baldwin.pdf, passage-selections.txt
 
 ---
@@ -317,18 +317,10 @@ Literary Texts (Current Unit): sonny-blues-baldwin.pdf, passage-selections.txt
 
 **Section label:** Part II
 
-- **One Document, One Purpose:**
-  - Upload separate files for syllabus, rubric, readings, and frameworks
-  - The model retrieves better from focused documents than from large omnibus files
-- **Add Metadata and Headings:**
-  - Include titles, authors, dates, and clear section headings
-  - These act as retrieval anchors that help the model find the right passage
-- **Supply What's Not in the Documents:**
-  - Your pedagogical intent isn't in the PDFs
-  - A short "common-feedback.txt" or "context-notes.txt" in your own words is more valuable than another PDF
-- **Update Per Unit:**
-  - Swap readings and assignment materials as the semester progresses
-  - A collection grounded in the current unit is more useful than one covering the whole course
+- **One Document, One Purpose:** Upload separate files; focused documents retrieve better than omnibus ones
+- **Add Metadata and Headings:** Titles, authors, dates, and section headings serve as retrieval anchors
+- **Supply What's Not in the Documents:** Include meta documents like "common-feedback.txt" that signpost how to use sources in the collection
+- **Update Per Unit:** Swap course materials as the semester progresses; up-to-date collections outperform semester-wide ones
 
 ---
 
@@ -336,18 +328,10 @@ Literary Texts (Current Unit): sonny-blues-baldwin.pdf, passage-selections.txt
 
 **Label:** Watch Out
 
-- **Dumping Everything In:**
-  - Uploading every reading for the entire semester dilutes retrieval quality
-  - More documents means more noise; start small and add materials as you test
-- **One Giant PDF:**
-  - A 200-page course reader retrieves unpredictably
-  - Short, well-labeled documents retrieve far better than long ones
-- **Forgetting the System Prompt:**
-  - Your system prompt needs explicit instructions for drawing on the knowledge collection
-  - Without that guidance, the collection is just a pile of documents
-- **Assuming Full Coverage:**
-  - Only retrieved passages are included in each response, not the full document
-  - If something is critical, put it in its own file with a clear heading
+- **Dumping Everything In:** Uploading every reading dilutes retrieval; start small and add materials as you test
+- **One Giant PDF:** A 200-page course reader retrieves unpredictably; short, well-labeled documents work far better
+- **Forgetting the System Prompt:** Without explicit instructions for drawing on the collection, it is just a pile of documents
+- **Assuming Full Coverage:** Only retrieved passages appear in each response; if something is critical, give it its own file
 
 ---
 
@@ -454,10 +438,10 @@ Recommended uploads:
 Your system prompt and knowledge collection work together. The prompt defines *behavior*. The collection provides *context*.
 
 **System Prompt:**
-"You are a writing revision scaffold for ENGL 101. When a student shares a draft, ask them to identify which rubric criterion they want to work on first. Reference the rubric and common-feedback documents before responding."
+"You are a writing revision scaffold for ENGL 101. When a student shares a draft, ask them to identify which area they want to work on first. Reference the assignment prompt and common-feedback documents before responding."
 
 **Knowledge Collection:**
-syllabus.pdf, revision-philosophy.txt, essay-1-prompt.pdf, essay-1-rubric.pdf, common-feedback.txt, mla-style-guide.pdf, strong-intro-examples.txt
+syllabus.pdf, revision-philosophy.txt, essay-1-prompt.pdf, common-feedback.txt, mla-style-guide.pdf, strong-intro-examples.txt
 
 **Test it:** Ask the model a question only answerable from your collection. If it gives generic advice, the retrieval isn't working. Check your document structure.
 

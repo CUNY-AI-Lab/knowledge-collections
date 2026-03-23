@@ -213,7 +213,7 @@
           <div class="flow-node flow-prompt" style="width: auto; flex: 1; border-color: rgba(59, 111, 181, 0.4);">
             <span class="flow-hidden-badge" style="background: var(--accent-blue);">New</span>
             <div class="flow-node-code" style="font-size: 0.85rem;">Knowledge Collection</div>
-            <div class="flow-node-desc" style="font-family: 'JetBrains Mono', monospace; color: var(--accent-light-blue); margin-top: 3px; font-size: 0.72rem;">syllabus.pdf, rubric.pdf&hellip;</div>
+            <div class="flow-node-desc" style="font-family: 'JetBrains Mono', monospace; color: var(--accent-light-blue); margin-top: 3px; font-size: 0.72rem;">syllabus.pdf, prompt.pdf&hellip;</div>
           </div>
         </div>
       </div>
@@ -228,7 +228,7 @@
         <div class="theater-conversation">
           <div class="theater-msg theater-msg-user">
             <span class="theater-msg-who"><span aria-hidden="true">&#128100;</span> Student</span>
-            <span class="theater-msg-text">&ldquo;What does the rubric say about evidence?&rdquo;</span>
+            <span class="theater-msg-text">&ldquo;What does the assignment say about evidence?&rdquo;</span>
           </div>
         </div>
         <!-- AI Model sits between user prompt and response -->
@@ -240,7 +240,7 @@
         <div class="theater-conversation">
           <div class="theater-msg theater-msg-ai">
             <span class="theater-msg-who"><span aria-hidden="true">&#129302;</span> Response</span>
-            <span class="theater-msg-text">&ldquo;The rubric asks for at least three sources cited with specific page numbers. Let&rsquo;s look at what you have so far.&rdquo;</span>
+            <span class="theater-msg-text">&ldquo;The assignment asks for at least three sources cited with specific page numbers. Let&rsquo;s look at what you have so far.&rdquo;</span>
           </div>
         </div>
         <div class="theater-zone-label" style="color: var(--accent-blue); margin-top: 6px;">What the student sees</div>
@@ -303,12 +303,12 @@
     <div class="comparison-panel panel-muted step-visible">
       <h4 style="color: var(--accent-red);">Without Knowledge Collection</h4>
       <p>&ldquo;For a midterm essay, you should generally focus on your thesis statement, use evidence from your readings, and structure your argument clearly. Make sure to address counterarguments.&rdquo;</p>
-      <p style="margin-top: 0.6em; font-style: italic; font-size: 0.85em; opacity: 0.7;">Generic advice. No connection to the assignment, the rubric, or the course readings.</p>
+      <p style="margin-top: 0.6em; font-style: italic; font-size: 0.85em; opacity: 0.7;">Generic advice. No connection to the assignment or the course readings.</p>
     </div>
     <div class="comparison-panel step-hidden" data-step="2">
       <h4 style="color: var(--accent-green);">With Knowledge Collection</h4>
-      <p>&ldquo;Based on the assignment prompt, your essay should analyze one primary source from the Reconstruction unit using the SOAPS framework we practiced. The rubric weights evidence and sourcing at 40%. Which document are you considering?&rdquo;</p>
-      <p style="margin-top: 0.6em; font-style: italic; font-size: 0.85em; opacity: 0.7;">Grounded in the actual assignment, rubric, and course methodology.</p>
+      <p>&ldquo;Based on the assignment prompt, your essay should analyze one primary source from the Reconstruction unit using the SOAPS framework we practiced. The prompt emphasizes evidence and sourcing. Which document are you considering?&rdquo;</p>
+      <p style="margin-top: 0.6em; font-style: italic; font-size: 0.85em; opacity: 0.7;">Grounded in the actual assignment and course methodology.</p>
     </div>
   </div>
 </div>
@@ -397,7 +397,7 @@
       <div class="flow-node flow-student" style="width: 100%;">
         <div class="flow-node-icon" style="font-size: 1.5rem;" aria-hidden="true">&#128100;</div>
         <div class="flow-node-label" style="font-size: 0.95rem;">Student Question</div>
-        <div class="flow-node-desc" style="font-size: 0.8rem;">&ldquo;What does the rubric say about citations?&rdquo;</div>
+        <div class="flow-node-desc" style="font-size: 0.8rem;">&ldquo;What does the assignment say about citations?&rdquo;</div>
       </div>
       <!-- Arrow down -->
       <div style="text-align: center;" aria-hidden="true">
@@ -462,8 +462,8 @@
     <h4 style="color: var(--accent-red);">What goes wrong?</h4>
     <ul class="stream-list step-hidden" data-step>
       <li>One large document retrieves poorly: retrieved passages are often irrelevant</li>
-      <li>No assignment-specific materials for the model to reference</li>
-      <li>No rubric, no readings, no examples of what good work looks like</li>
+      <li>No assignment context for the revision task</li>
+      <li>No readings or reference materials for the model to draw on</li>
     </ul>
   </div>
 </div>
@@ -484,13 +484,12 @@
   <div class="prompt-block prompt-mid"><span class="prompt-label">Getting There</span>Collection contents:
 &bull; syllabus.pdf
 &bull; essay-1-prompt.pdf
-&bull; essay-1-rubric.pdf
 &bull; mla-style-guide.pdf</div>
   <div class="why-better">
     <h4>What improved?</h4>
     <ul class="stream-list step-hidden" data-step>
-      <li>Separate documents for different purposes: the model can find the rubric when asked about expectations</li>
-      <li>Assignment-specific prompt gives the model context for that unit</li>
+      <li>Separate documents let the model find what it needs</li>
+      <li>Assignment prompt gives the model context for the revision task</li>
       <li>Style guide helps with formatting questions</li>
     </ul>
   </div>
@@ -498,8 +497,8 @@
     <h4 style="color: var(--accent-amber);">What's still missing?</h4>
     <ul class="stream-list step-hidden" data-step>
       <li>No course readings for the model to reference during analysis</li>
-      <li>No examples of strong student work to model expectations</li>
-      <li>No instructor notes on common student challenges</li>
+      <li>No common feedback patterns to guide revision</li>
+      <li>No instructor notes on what substantive revision looks like in this course</li>
     </ul>
   </div>
 </div>
@@ -525,7 +524,6 @@
 
 <strong style="color: var(--accent-cyan);">Assignment Materials (Essay 1: Rhetoric in Popular Media)</strong>
 &bull; essay-1-prompt.pdf: assignment instructions and requirements
-&bull; essay-1-rubric.pdf: evaluation criteria with descriptions of each level
 &bull; common-feedback.txt: patterns from past semesters (e.g., thesis too broad, evidence not analyzed)
 
 <strong style="color: var(--accent-cyan);">Reference Materials</strong>
@@ -563,7 +561,7 @@
     <ul class="stream-list step-hidden" data-step>
       <li>A full textbook chapter is too long and too general: retrieved passages are often irrelevant</li>
       <li>No primary sources for the model to help students analyze</li>
-      <li>No methodological framework for the model to follow</li>
+      <li>No framework like SOAPS for the model to scaffold source analysis</li>
     </ul>
   </div>
 </div>
@@ -598,7 +596,7 @@
     <h4 style="color: var(--accent-amber);">What's still missing?</h4>
     <ul class="stream-list step-hidden" data-step>
       <li>No contextual background for the model to draw on when students ask about the period</li>
-      <li>No rubric or analysis framework to guide the model&rsquo;s scaffolding</li>
+      <li>No SOAPS framework or equivalent to guide source analysis</li>
       <li>No source metadata (author, date, document type) to support sourcing questions</li>
     </ul>
   </div>
@@ -622,7 +620,6 @@
 <strong style="color: var(--accent-cyan);">Course Context</strong>
 &bull; syllabus.pdf: schedule, themes, learning objectives
 &bull; soaps-framework.txt: the analytical framework students use, with definitions and examples
-&bull; source-analysis-rubric.pdf: evaluation criteria for the source analysis report
 
 <strong style="color: var(--accent-cyan);">Primary Sources (Reconstruction Unit)</strong>
 &bull; freedmens-bureau-report-1866.pdf: with metadata: author, date, document type, archive
@@ -663,7 +660,7 @@
     <h4 style="color: var(--accent-red);">What goes wrong?</h4>
     <ul class="stream-list step-hidden" data-step>
       <li>A 180-page file retrieves unpredictably: the model might pull from the wrong text entirely</li>
-      <li>No assignment context or analytical framework</li>
+      <li>No assignment context or close-reading framework</li>
       <li>No separation between literary texts and critical essays</li>
     </ul>
   </div>
@@ -698,9 +695,9 @@
   <div style="margin-top: 0.6em;">
     <h4 style="color: var(--accent-amber);">What's still missing?</h4>
     <ul class="stream-list step-hidden" data-step>
-      <li>No rubric for the model to reference when guiding analysis</li>
-      <li>No examples of close-reading annotations or model analyses</li>
-      <li>No glossary of literary terms the course uses</li>
+      <li>No annotated examples showing how to move from observation to interpretation</li>
+      <li>No key terms for the current unit (e.g., tension, irony, ambiguity)</li>
+      <li>No instructor notes on what close reading looks like in this course</li>
     </ul>
   </div>
 </div>
@@ -722,12 +719,10 @@
 
 <strong style="color: var(--accent-cyan);">Course Context</strong>
 &bull; syllabus.pdf: schedule, texts, learning objectives
-&bull; new-criticism-framework.txt: key concepts: close reading, tension, irony, paradox, ambiguity
-&bull; literary-terms-glossary.txt: definitions of terms used in the course (diction, imagery, syntax, tone)
+&bull; new-criticism-framework.txt: key concepts and terms for this unit (tension, irony, paradox, ambiguity, diction, imagery)
 
 <strong style="color: var(--accent-cyan);">Assignment Materials (Close Reading Essay)</strong>
 &bull; close-reading-assignment.pdf: instructions and requirements
-&bull; close-reading-rubric.pdf: evaluation criteria for textual analysis
 &bull; annotated-passage-example.txt: model annotation showing how to move from observation to interpretation
 
 <strong style="color: var(--accent-cyan);">Literary Texts (Current Unit)</strong>
@@ -753,31 +748,19 @@
   <div class="grid-2">
     <div class="card card-cyan">
       <h4>One Document, One Purpose</h4>
-      <ul style="font-size: 1.15em;">
-        <li>Upload separate files for syllabus, rubric, readings, and frameworks</li>
-        <li>The model retrieves better from focused documents than from large omnibus files</li>
-      </ul>
+      <p style="font-size: 1.15em;">Upload separate files; focused documents retrieve better than omnibus ones</p>
     </div>
     <div class="card">
       <h4>Add Metadata and Headings</h4>
-      <ul style="font-size: 1.15em;">
-        <li>Include titles, authors, dates, and clear section headings</li>
-        <li>These act as retrieval anchors that help the model find the right passage</li>
-      </ul>
+      <p style="font-size: 1.15em;">Titles, authors, dates, and section headings serve as retrieval anchors</p>
     </div>
     <div class="card card-navy">
       <h4>Supply What&rsquo;s Not in the Documents</h4>
-      <ul style="font-size: 1.15em;">
-        <li>Your pedagogical intent isn&rsquo;t in the PDFs</li>
-        <li>A short &ldquo;common-feedback.txt&rdquo; or &ldquo;context-notes.txt&rdquo; in your own words is more valuable than another PDF</li>
-      </ul>
+      <p style="font-size: 1.15em;">Include meta documents like &ldquo;common-feedback.txt&rdquo; that signpost how to use sources in the collection</p>
     </div>
     <div class="card card-cyan">
       <h4>Update Per Unit</h4>
-      <ul style="font-size: 1.15em;">
-        <li>Swap readings and assignment materials as the semester progresses</li>
-        <li>A collection grounded in the current unit is more useful than one covering the whole course</li>
-      </ul>
+      <p style="font-size: 1.15em;">Swap course materials as the semester progresses; up-to-date collections outperform semester-wide ones</p>
     </div>
   </div>
 </div>
@@ -791,31 +774,19 @@
   <div class="grid-2" style="margin-top: 1em;">
     <div class="card" style="border-left-color: var(--accent-red);">
       <h4>Dumping Everything In</h4>
-      <ul style="font-size: 1.15em;">
-        <li>Uploading every reading for the entire semester dilutes retrieval quality</li>
-        <li>More documents means more noise; start small and add materials as you test</li>
-      </ul>
+      <p style="font-size: 1.15em;">Uploading every reading dilutes retrieval; start small and add materials as you test</p>
     </div>
     <div class="card" style="border-left-color: var(--accent-red);">
       <h4>One Giant PDF</h4>
-      <ul style="font-size: 1.15em;">
-        <li>A 200-page course reader retrieves unpredictably</li>
-        <li>Short, well-labeled documents retrieve far better than long ones</li>
-      </ul>
+      <p style="font-size: 1.15em;">A 200-page course reader retrieves unpredictably; short, well-labeled documents work far better</p>
     </div>
     <div class="card" style="border-left-color: var(--accent-amber);">
       <h4>Forgetting the System Prompt</h4>
-      <ul style="font-size: 1.15em;">
-        <li>Your system prompt needs explicit instructions for drawing on the knowledge collection</li>
-        <li>Without that guidance, the collection is just a pile of documents</li>
-      </ul>
+      <p style="font-size: 1.15em;">Without explicit instructions for drawing on the collection, it is just a pile of documents</p>
     </div>
     <div class="card" style="border-left-color: var(--accent-amber);">
       <h4>Assuming Full Coverage</h4>
-      <ul style="font-size: 1.15em;">
-        <li>Only retrieved passages are included in each response, not the full document</li>
-        <li>If something is critical, put it in its own file with a clear heading</li>
-      </ul>
+      <p style="font-size: 1.15em;">Only retrieved passages appear in each response; if something is critical, give it its own file</p>
     </div>
   </div>
 </div>
