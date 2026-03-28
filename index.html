@@ -21,6 +21,13 @@
 <!-- Accessible live region for slide announcements -->
 <div id="slide-announce" class="sr-only" aria-live="polite" aria-atomic="true"></div>
 
+<!-- Lightbox overlay for expanded screenshots -->
+<div class="lightbox-overlay" id="lightbox" aria-hidden="true" role="dialog" aria-label="Expanded screenshot">
+  <button class="lightbox-close" aria-label="Close expanded view">&times;</button>
+  <img src="" alt="">
+  <div class="lightbox-caption"></div>
+</div>
+
 <div id="deck" role="region" aria-roledescription="slide deck" aria-label="Curating Knowledge Collections presentation">
 
 <!-- ==========================================
@@ -1046,6 +1053,7 @@ function copyTemplate(id) {
 <script src="js/tabs.js"></script>
 <script src="js/carousel.js"></script>
 <script src="js/step-carousel.js"></script>
+<script src="js/lightbox.js"></script>
 <script src="js/scrubber.js"></script>
 <script src="js/deck-engine.js"></script>
 </body>
